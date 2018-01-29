@@ -1,0 +1,52 @@
+.hamburger{
+  display: none;
+}
+
+nav {
+	margin-top: 10px;
+	height: 150px;
+}
+
+.navContainer {
+	height: 100%;
+}
+
+.logoContainer {
+	text-align: center;
+}
+.navLogo {
+	height: 150px;
+	width: 150px;
+}
+.navButton {
+	display: block;
+/*	font-size: 15px;*/
+	margin-top: 65%;
+	color: #009900;
+}
+
+.navButton:hover {
+	text-decoration: none;
+	color: #FF0000;
+	transition: .25s;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  .hamburger {
+    display: block;
+    position: fixed;
+    top: 2%;
+    left: 2%;
+  }
+  .buttonContainer {
+  	display: none;
+  }
+  .circle {
+  	width: 10px;
+  	height: 10px;
+  	background: white;
+  	border-radius: 50%;
+  	margin-left: 50%;
+  }
+}
