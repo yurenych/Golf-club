@@ -1,5 +1,10 @@
+
 .hamburger{
   display: none;
+}
+
+.fat-nav__wrapper {
+  background: #009900;
 }
 
 nav {
@@ -18,6 +23,7 @@ nav {
 	width: 150px;
 }
 .navButton {
+  text-align: center;
 	display: block;
 	color: #009900;
 }
@@ -85,5 +91,8 @@ nav {
   }
   .navImgLine {
 	display: none;
+  }
+  .container {
+    padding: 0;
   }
 }
