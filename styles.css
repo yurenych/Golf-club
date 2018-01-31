@@ -26,15 +26,16 @@ nav {
   text-align: center;
 	display: block;
 	color: #009900;
+  height: 27px;
+  padding-top: 3px;
 }
-
-.navButton:hover {
-	text-decoration: none;
-	color: #FF0000;
-	transition: .25s;
-	cursor: pointer;
+.buttonContainer:hover .navButton {
+  background:  #009900;
+  border-radius: 15px;
+  text-decoration: none;
+  cursor: pointer;
+    color: white;
 }
-
 .navImgLine {
 	width: 100%;
 	height: 9px;
