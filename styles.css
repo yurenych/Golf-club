@@ -9,12 +9,7 @@
 
 nav {
 	margin-top: 10px;
-/*	height: 150px;*/
 }
-
-.navContainer {
-}
-
 .logoContainer {
 	text-align: center;
 }
@@ -28,6 +23,7 @@ nav {
 	color: #009900;
   height: 27px;
   padding-top: 3px;
+  font-size: 16px;
 }
 .buttonContainer:hover .navButton {
   background:  #009900;
@@ -40,39 +36,9 @@ nav {
 	width: 100%;
 	height: 9px;
 }
-.history-photo {
-  height: 150px;
-  width: 150px;
-}
-.headline{
-  margin: 0;
-  text-align: center;
-}
-.club{
-  margin: 0;
-  padding: 0; 
-}
-.club-info-historia{
-  background: #C2DEAE;
-  margin-right:0;
-  margin-left: 0;
-  padding: 2%;   
-  list-style-type:none; 
-}
-.club-info-zarzad{
-  background: #FBA700;
-  margin-right:0;
-  margin-left: 0;
-  padding: 2%;   
-  list-style-type:none; 
-}
-.club-info-cele{
-  background: #8F81E8;
-  margin-right:0;
-  margin-left: 0;
-  padding: 2%;   
-  list-style-type:none; 
-}
+/*.navContainer {
+  max-width: 1170px;
+}*/
 @media screen and (max-width: 992px) {
   .hamburger {
     display: block;
@@ -92,8 +58,5 @@ nav {
   }
   .navImgLine {
 	display: none;
-  }
-  .container {
-    padding: 0;
   }
 }

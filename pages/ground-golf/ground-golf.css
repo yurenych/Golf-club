@@ -5,20 +5,31 @@
 .ground-golf-zasady{
 	background: ;
 	list-style-type:none;
-
 }
 .ground-golf-zasady{
 	background: ;
 	list-style-type:none;
-
 }
 .ground-golf-pole{
 	background: ;
 	list-style-type:none;
-
 }
 .ground-golf-sprzety{
 	background: ;
 	list-style-type:none;
-
+}
+.ground-golf {
+	padding: 0;
+}
+.wrapper {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+.headline {
+	text-align: center;
+	margin: 3% 0 1% 0;
+}
+.articleTitle {
+	font-size: 16px;
+	line-height: 24px;
 }

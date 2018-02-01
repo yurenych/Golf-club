@@ -7,13 +7,71 @@
 	list-style-type: none;
 	text-align: center;
 }
-.club-info-zarzad{
-	background:;
-	list-style-type: none;
-	text-align: center;
-}
 .club-info-komisje{
 	background: ;
 	list-style-type: none;
 	text-align: center;	
+}
+.histotyTitle {
+  font-size: 15px;
+  line-height: 22px;
+	margin-bottom: 2%;
+}
+.history-photo {
+  height: 180px;
+  width: 100%;
+}
+/*******************************************Slider Photo**************/
+.history-photo-slider {
+  width: 100%;
+  height: 250px;
+  padding: 2%;
+}
+.headline{
+  margin: 0;
+  text-align: center;
+}
+.club-info-historia{
+  background: #C2DEAE;
+  margin-right:0;
+  margin-left: 0;
+  list-style-type:none; 
+}
+.club-info-zarzad{
+  background: #FBA700;
+  margin-right:0;
+  margin-left: 0;
+  padding: 1% 0 2% 0;   
+  list-style-type:none; 
+  text-align: center;
+}
+.club-info-cele{
+  background: #8F81E8;
+  margin-right:0;
+  margin-left: 0;
+  padding: 1% 4% 1%;   
+  list-style-type:none; 
+}
+.cele {
+	font-size: 16px;
+	line-height: 24px;
+}
+.club {
+	padding: 0;
+	margin: 0;
+}
+.komisje {
+	padding: 1% 0 2% 0;
+}
+
+@media screen and (min-width: 992px) {
+  .club-info-historia {
+    padding: 2%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .history-photo {
+    margin: 15px 0;
+  }
 }
