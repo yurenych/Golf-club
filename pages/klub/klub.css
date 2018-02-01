@@ -2,3 +2,18 @@
 	max-width: 1170px;
 	margin: 0 auto;
 }
+.club-info-statut{
+	background: #FF3F35;
+	list-style-type: none;
+	text-align: center;
+}
+.club-info-zarzad{
+	background:;
+	list-style-type: none;
+	text-align: center;
+}
+.club-info-komisje{
+	background: ;
+	list-style-type: none;
+	text-align: center;	
+}
