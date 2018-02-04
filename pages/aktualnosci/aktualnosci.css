@@ -1,0 +1,31 @@
+.wrapper {
+	max-width: 900px;
+	margin: 0 auto;
+}
+.headline{
+	text-align: center;
+}
+.news-photo-text{
+	position: relative;
+
+}
+.news-date{
+	color: white;
+	background: red;
+	position: absolute;
+	top: 0;
+	left: 0%;
+	padding: 0.5%;
+}
+.photo-news img{
+	width:400px;
+	height:300px;
+	text-align: right;
+}
+.photo-news{
+	padding:0 15px 0 0; 
+}
+.news-container{
+	background: rgba(169,169,169,.2);
+	
+}
