@@ -74,24 +74,45 @@ nav {
 footer{
   background-color:#222222;
   padding: 60px 0px;
+  
 }
 
-footer .menu li a{
-  color:#ADF45C;
-  padding:10px;
+footer ul{
+    list-style:none;
+    margin:0 auto;
+    display:inline-block;
+    padding: 0 0 3% 0;
+}
+
+footer ul li{
+    float:left;
+}
+
+footer ul li a{
+  color:#b1aca1;
+    padding:20px;
+}
+
+footer ul li a:hover{
+  color:#7dabdb;
   text-decoration:none;
 }
 
-footer .menu li a:hover{
-  color:#7dabdb;
+.footer-top{
+  padding-bottom:50px;
 }
 
-.fa.fa-facebook {
-  color:#ADF45C;
-  font-size:20px;
-  padding:10px;
+.footer-top .fa{
+    font-size:18px;
+    color: #FFF;
+    padding-right:10px;
 }
 
-.fa.fa-facebook:hover {
-  color:#6794c2;
+.footer-top a{
+    color:#FFF;
+    text-decoration:none;
+}
+
+.footer-top .col-lg-2:hover .fa , .footer-top .col-lg-2:hover a{
+    color:#7dabdb;
 }
