@@ -30,7 +30,6 @@
 	margin: 2% 0 1% 0;
 }
 .articleTitle {
-	text-align: center;
 	font-size: 16px;
 	line-height: 24px;
 }
@@ -41,6 +40,11 @@
 .pole-photo{
 	width: 600px;
 	height: 300px;
+}
+.photo-intext-container {
+	margin-top: 15px;
+	display: inline-block;
+	text-align: center;
 }
 @media screen and (max-width: 992px) {
 	.wrapper {
