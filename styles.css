@@ -60,3 +60,38 @@ nav {
 	display: none;
   }
 }
+
+/*FOOTER*/
+
+.copyright{
+    background-color:#f0f0f0;
+}
+
+.copyright p{
+   margin:15px 0px;
+}
+
+footer{
+  background-color:#222222;
+  padding: 60px 0px;
+}
+
+footer .menu li a{
+  color:#ADF45C;
+  padding:10px;
+  text-decoration:none;
+}
+
+footer .menu li a:hover{
+  color:#7dabdb;
+}
+
+.fa.fa-facebook {
+  color:#ADF45C;
+  font-size:20px;
+  padding:10px;
+}
+
+.fa.fa-facebook:hover {
+  color:#6794c2;
+}
