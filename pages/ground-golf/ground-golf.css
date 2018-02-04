@@ -27,7 +27,7 @@
 }
 .headline {
 	text-align: center;
-	margin: 3% 0 1% 0;
+	margin: 2% 0 1% 0;
 }
 .articleTitle {
 	font-size: 16px;
@@ -40,5 +40,9 @@
 .pole-photo{
 	width: 600px;
 	height: 300px;
-	
+}
+@media screen and (max-width: 992px) {
+	.wrapper {
+		margin: 0 15px;
+	}
 }

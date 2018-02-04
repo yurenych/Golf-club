@@ -3,6 +3,12 @@
 	margin: 0 auto;
 	position: relative;
 }
+.mainTitle {
+	font-size: 35px;
+	display: inline-block;
+	text-align: center;
+	margin: 2% 0 1% 0;
+}
 .history-photo-slider {
 	width: 100%;
 	padding: 2%;
@@ -36,4 +42,10 @@
 }
 .buttonPrev:hover, .buttonNext:hover {
 	cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+	.buttonPrev img, .buttonNext img, .slider-for, .slider-nav {
+		display: none;
+	}
 }

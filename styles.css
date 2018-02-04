@@ -10,6 +10,13 @@
 nav {
 	margin-top: 10px;
 }
+.navContainer {
+  text-align: center;
+}
+.buttonContainer {
+  width: 10%;
+  display: inline-block;
+}
 .logoContainer {
 	text-align: center;
 }
@@ -36,9 +43,55 @@ nav {
 	width: 100%;
 	height: 9px;
 }
-/*.navContainer {
-  max-width: 1170px;
-}*/
+
+/*FOOTER*/
+
+footer{
+  background-color:#222222;
+  opacity: .95;
+  padding: 1.5% 0 3% 0;
+}
+.footerButton, .socials {
+  color: #7dabdb;
+}
+.footerContainer {
+  text-align: center;
+}
+.socials {
+  border-top: 1px solid grey;
+  margin-top: 1%;
+  text-align: center;
+}
+.facebook, .contactus {
+  position: relative;
+  margin-top: 10px;
+  display: inline-block; 
+  width: 10%;
+} 
+.footerButton:hover, .facebook:hover, .contactus:hover {
+  color: #B9E397;
+  cursor: pointer;
+  transition: .25s;
+}
+.footerButton {
+  width: 10%;
+  display: inline-block; 
+}
+.copyright {
+  margin: 5px;
+  text-align: center;
+}
+.fbLogo, .mailLogo {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+}
+.mailLogo {
+  top: -4px;
+  left: -10px;
+}
 @media screen and (max-width: 992px) {
   .hamburger {
     display: block;
@@ -47,72 +100,21 @@ nav {
     left: 2%;
   }
   .buttonContainer {
-  	display: none;
+    display: none;
   }
   .circle {
-  	width: 10px;
-  	height: 10px;
-  	background: white;
-  	border-radius: 50%;
-  	margin-left: 50%;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    margin-left: 50%;
   }
   .navImgLine {
-	display: none;
+  display: none;
   }
-}
-
-/*FOOTER*/
-
-.copyright{
-    background-color:#f0f0f0;
-}
-
-.copyright p{
-   margin:15px 0px;
-}
-
-footer{
-  background-color:#222222;
-  padding: 60px 0px;
-  
-}
-
-footer ul{
-    list-style:none;
-    margin:0 auto;
-    display:inline-block;
-    padding: 0 0 3% 0;
-}
-
-footer ul li{
-    float:left;
-}
-
-footer ul li a{
-  color:#B9E397;
-    padding:20px;
-}
-
-footer ul li a:hover{
-  color:#7dabdb;
-  text-decoration:none;
-}
-
-.footer-top{
-  padding-bottom:50px;
-}
-
-.footer-top .fa{
-    font-size:18px;
-    color: #FFF;
-    padding-right:10px;
-}
-
-.footer-top a{
-    color:#B9E397;
-    text-decoration:none;
-}
-
-.footer-top .col-lg-2:hover .fa , .footer-top .col-lg-2:hover a{
-    color:#7dabdb;
+  .footerButton {
+    width: 100%;
+    display: block;
+    margin: 15px auto;
+  }
 }
