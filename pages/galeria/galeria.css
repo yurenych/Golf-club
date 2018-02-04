@@ -5,7 +5,6 @@
 }
 .mainTitle {
 	font-size: 35px;
-	display: inline-block;
 	text-align: center;
 	margin: 2% 0 1% 0;
 }
@@ -30,13 +29,13 @@
 }
 .buttonPrev {
 	position: absolute;
-	top: 13%;
+	top: 17%;
 	left: 3%;
 	z-index: 2; 
 }
 .buttonNext {
 	position: absolute;
-	top: 13%;
+	top: 17%;
 	right: 3%;
 	z-index: 2; 
 }
