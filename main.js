@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  if (!$(".klub, .someClass").length) {
+  if (!$(".klub").length) {
     return null
   }
 	$('.slider').slick( {
@@ -32,17 +32,25 @@ $(document).ready(function(){
   $('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
     arrows: false,
     fade: true,
-    asNavFor: '.slider-nav'
+    infinite: true,
+    asNavFor: '.slider-nav',
+    arrows: true,
+    prevArrow: '.buttonPrev',
+    nextArrow: '.buttonNext'
   });
   $('.slider-nav').slick({
-    slidesToShow: 3,
+    autoplay: true,
+    speed: 600,
+    slidesToShow: 6,
     slidesToScroll: 1,
     asNavFor: '.slider-for',
     dots: true,
+    arrows: false,
     centerMode: true,
-    focusOnSelect: true
+    focusOnSelect: true,
   });
 });
 
