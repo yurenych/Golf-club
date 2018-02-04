@@ -1,4 +1,7 @@
 $(document).ready(function(){
+  if (!$(".klub, .someClass").length) {
+    return null
+  }
 	$('.slider').slick( {
 		autoplay: true,
   	slidesToShow: 2,
