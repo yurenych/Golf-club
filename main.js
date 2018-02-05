@@ -7,6 +7,7 @@ $(document).ready(function(){
   	slidesToShow: 2,
   	slidesToScroll: 1,
   	speed: 600,
+    arrows: true,
   	responsive: [
   		{
   			breakpoint: 992,
@@ -33,7 +34,6 @@ $(document).ready(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    arrows: false,
     fade: true,
     infinite: true,
     asNavFor: '.slider-nav',

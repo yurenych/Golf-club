@@ -22,6 +22,9 @@
   width: 100%;
 }
 /*******************************************Slider Photo**************/
+.slick-prev:before, .slick-next:before {
+  color: #808080;
+}
 .history-photo-slider {
   width: 100%;
   height: 250px;
@@ -32,7 +35,7 @@
   text-align: center;
 }
 .club-info-historia{
-  background: #C2DEAE;
+  background: rgba(169,169,169,.2) ;
   margin-right:0;
   margin-left: 0;
   list-style-type:none; 
@@ -46,7 +49,7 @@
   text-align: center;
 }
 .club-info-cele{
-  background: #8F81E8;
+  background:rgba(169,169,169,.2);
   margin-right:0;
   margin-left: 0;
   padding: 1% 4% 1%;   
