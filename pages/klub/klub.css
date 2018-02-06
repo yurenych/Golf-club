@@ -21,14 +21,19 @@
   height: 180px;
   width: 100%;
 }
-/*******************************************Slider Photo**************/
+/*******************************************Slider **************/
+.sliderText {
+  background: rgba(0, 153, 0, .6);
+  margin: 0 2% 0 2%;
+  padding: 2%;
+}
 .slick-prev:before, .slick-next:before {
   color: #808080;
 }
 .history-photo-slider {
   width: 100%;
   height: 250px;
-  padding: 2%;
+  padding: 2% 2% 0 2%;
 }
 .headline{
   margin: 0;
