@@ -81,7 +81,9 @@
 	color: white;
 	display: inline-block;
 }
-
+.containerInfo {
+	margin-left: 10px;
+}
 @media screen and (max-width: 992px) {
 	.pole-photo {
 		width: 100%;
@@ -98,5 +100,8 @@
 	}
 	.contactus img, .facebook img{
 		left: 30%;
+	}
+	.containerInfo {
+		margin-left: 0px;
 	}
 }
