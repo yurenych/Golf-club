@@ -58,7 +58,7 @@
 .taskContainer {
 	position: relative;
 }
-.roundNunber {
+.roundNumber {
 	position: absolute;
 	top: -7px;
 	display: inline-block;
@@ -84,6 +84,7 @@
 .containerInfo {
 	margin-left: 10px;
 }
+
 @media screen and (max-width: 992px) {
 	.pole-photo {
 		width: 100%;
@@ -103,5 +104,14 @@
 	}
 	.containerInfo {
 		margin-left: 0px;
+	}
+	.groundGolfPhoto img {
+		width: 100%;
+	}
+	.roundNumber {
+		width: 20%;
+	}
+	.taskTitle {
+		padding: 8px 0 8px 20%;
 	}
 }

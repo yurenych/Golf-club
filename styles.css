@@ -116,4 +116,11 @@ footer{
     display: block;
     margin: 15px auto;
   }
+  .facebook, .contactus {
+    display: block;
+    width: 100%;
+  }
+  .mailLogo, .fbLogo {
+    left: 25%;
+  } 
 }
