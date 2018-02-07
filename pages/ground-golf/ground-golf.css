@@ -27,13 +27,12 @@
 }
 .wrapper {
 	background: rgba(169,169,169,.15);
-	padding: 0 15px;
 	max-width: 1170px;
 	margin: 0 auto;
 }
 .headline {
 	text-align: center;
-	margin: 2% 0 1% 0;
+	margin: 2% 2% 1%;
 }
 .articleTitle {
 	font-size: 16px;
