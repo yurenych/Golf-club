@@ -11,7 +11,7 @@ ul, li {
 	text-align: center;
 }
 .club-info-komisje{
-	background: ;
+  padding: 1% 0 2% 0;
 	list-style-type: none;
 	text-align: center;	
 }
@@ -70,9 +70,6 @@ ul, li {
 .club {
 	padding: 0;
 	margin: 0;
-}
-.komisje {
-	padding: 1% 0 2% 0;
 }
 .government {
   padding: 0;
