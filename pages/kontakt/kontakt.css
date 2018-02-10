@@ -1,0 +1,37 @@
+.wrapper {
+	max-width: 1170px;
+	margin: 0 auto 15px;
+	background: rgba(169,169,169,.15);
+}
+.mainTitle {
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	font-size: 30px;
+	margin: 2% 0 1%;
+}
+.infoContainer {
+	border: 1px solid #737373;
+	border-radius: 3px;
+	text-align: center;
+	padding: 10px;
+}
+.borderContainer {
+	border: 1px solid #b3b3b3;
+	padding: 10px 0;
+}
+footer {
+	position: absolute;
+	bottom: 5%;
+	width: 100%; 
+}
+.copyright {
+	position: absolute;
+	bottom: 0%;
+	right: 40%;
+}
+@media screen and (max-width: 992px) {
+	footer, .copyright {
+		position: static;
+	}
+}
