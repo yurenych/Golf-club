@@ -7,10 +7,12 @@
 
   <link rel="stylesheet" type="text/css" href="../../lib/bootstrap/css/bootstrap.min.css"/>
   <link rel="stylesheet" type="text/css" href="../../lib/fatNav/jquery.fatNav.min.css">
+  <link rel="stylesheet" type="text/css" href="../../lib/dataTables/datatables.min.css">
 
   <script type="text/javascript" src="../../lib/jquery/index.js" ></script>
   <script type="text/javascript" src="../../lib/fatNav/jquery.fatNav.min.js" ></script>
-  <script type="text/javascript" src="../../scripts/main.js" defer></script>
+  <script type="text/javascript" charset="utf8" src="../../lib/dataTables/datatables.min.js"></script>
+  <script type="text/javascript" src="../../main.js" defer></script>
   
   <link rel="stylesheet" href="../../styles.css"/>
   <link rel="stylesheet" href="./turnieje.css"/>
@@ -54,4 +56,33 @@
       <div class="col-md-12"><img class="navImgLine" src="../../images/obi2.gif"></div>
     </div>
   </nav>
+  <div class="testt">
+    <table id="table_id" class="display">
+      <thead class="test">
+          <tr>
+              <th>Column 1</th>
+              <th>Column 2</th>
+              <th>Column 3</th>
+              <th>Column 4</th>
+              <th>Column 5</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Row 1 Data 1</td>
+              <td>Row 1 Data 2</td>
+              <td>Row 1 Data 3</td>
+              <td>Row 1 Data 4</td>
+              <td>Row 1 Data 5</td>
+          </tr>
+          <tr>
+              <td>Row 2 Data 1</td>
+              <td>Row 2 Data 2</td>
+              <td>Row 2 Data 3</td>
+              <td>Row 2 Data 4</td>
+              <td>Row 2 Data 5</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
 </body>
