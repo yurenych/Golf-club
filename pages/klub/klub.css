@@ -6,7 +6,7 @@ ul, li {
 	margin: 0 auto 15px;
 }
 .club-info-statut{
-	background: #FF3F35;
+	background: #f3ec0347;
 	list-style-type: none;
 	text-align: center;
 }
@@ -26,16 +26,17 @@ ul, li {
 }
 /*******************************************Slider **************/
 .sliderText {
-  background: rgba(0, 153, 0, .6);
+  background: rgba(0, 153, 0, .8);
   margin: 0 2% 0 2%;
   padding: 2%;
+  color: rgba(255,255,255,1);
 }
 .slick-prev:before, .slick-next:before {
   color: #808080;
 }
 .history-photo-slider {
   width: 100%;
-  height: 250px;
+  height: 300px;
   padding: 2% 2% 0 2%;
 }
 .headline{
@@ -43,13 +44,13 @@ ul, li {
   text-align: center;
 }
 .club-info-historia{
-  background: rgba(169,169,169,.1) ;
+  background: #f3ec0347 ;
   margin-right:0;
   margin-left: 0;
   list-style-type:none; 
 }
 .club-info-zarzad{
-  background: #FBA700;
+  background: #f3ec0347
   margin-right:0;
   margin-left: 0;
   padding: 1% 0 2% 0;   
@@ -57,7 +58,7 @@ ul, li {
   text-align: center;
 }
 .club-info-cele{
-  background:rgba(169,169,169,.2);
+  background:#f3ec0347;
   margin-right:0;
   margin-left: 0;
   padding: 1% 4% 1%;   
@@ -74,7 +75,7 @@ ul, li {
 .government {
   padding: 0;
   list-style-type: none;
-  background: rgba(169,169,169,.2);
+  background: #f3ec0347;
 }
 @media screen and (min-width: 992px) {
   .club-info-historia {

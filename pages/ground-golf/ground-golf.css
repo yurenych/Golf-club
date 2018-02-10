@@ -32,7 +32,7 @@
 }
 .headline {
 	text-align: center;
-	margin: 2% 2% 1%;
+	margin: 2% 2%;
 }
 .articleTitle {
 	font-size: 16px;
@@ -112,5 +112,8 @@
 	}
 	.taskTitle {
 		padding: 8px 0 8px 20%;
+	}
+	.golfMap-text{
+		margin: 3% 2%;
 	}
 }

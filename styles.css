@@ -51,7 +51,7 @@ footer{
   padding: 1.5% 0 3% 0;
 }
 .footerButton, .socials {
-  color: #7dabdb;
+  color: #09a715;
 }
 .footerContainer {
   text-align: center;
@@ -68,7 +68,7 @@ footer{
   width: 10%;
 } 
 .footerButton:hover, .facebook:hover, .contactus:hover {
-  color: #B9E397;
+  color: #ffffff;
   cursor: pointer;
   transition: .25s;
 }
