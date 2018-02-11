@@ -5,7 +5,9 @@
 .headline{
 	text-align: center;
 }
-
+.news-photo-text{
+	margin: 2% 0;
+}
 .news-photo-text:hover {
 	cursor: pointer;
 }

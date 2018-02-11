@@ -22,16 +22,19 @@
 }
 footer {
 	position: absolute;
-	bottom: 5%;
-	width: 100%; 
+	bottom: 30px;
+	width: 100%;
 }
 .copyright {
 	position: absolute;
 	bottom: 0%;
-	right: 40%;
+	width: 99%;
 }
 @media screen and (max-width: 992px) {
 	footer, .copyright {
 		position: static;
+	}
+	.copyright{
+		width: auto;
 	}
 }

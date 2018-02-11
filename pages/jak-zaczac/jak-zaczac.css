@@ -1,0 +1,20 @@
+.wrapper {
+	max-width: 1170px;
+	margin: 0 auto 15px;
+  background: rgba(243,236,3,0.28);
+}
+.headline{
+  margin: 2% 0;
+  text-align: center;
+}
+.jak-zaczac-gdzie .col-md-4{
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.5em;
+	padding: 25px 75px;
+	border: 1px solid;
+}
+.jak-zaczac-text{
+	font-size: 1.3em;
+}
+.b
