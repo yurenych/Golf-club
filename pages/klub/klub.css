@@ -41,8 +41,9 @@ ul, li {
   padding: 2% 2% 0 2%;
 }
 .headline{
-  margin: 0;
+  font-size: 35px;
   text-align: center;
+  margin: 2% 0 1% 0;
 }
 .club-info-historia{
   background: ;
@@ -77,11 +78,6 @@ ul, li {
   list-style-type: none;
   border-top: 1px solid;
   border-bottom: 1px solid;
-}
-@media screen and (min-width: 992px) {
-  .club-info-historia {
-    padding: 2%;
-  }
 }
 
 @media screen and (max-width: 992px) {

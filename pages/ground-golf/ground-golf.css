@@ -31,8 +31,9 @@
 	margin: 0 auto;
 }
 .headline {
-	text-align: center;
-	margin: 2% 2%;
+    font-size: 35px;
+    text-align: center;
+    margin: 2% 0 1% 0;
 }
 .articleTitle {
 	font-size: 16px;
