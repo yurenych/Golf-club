@@ -55,6 +55,9 @@ $(document).ready(function(){
 });
 
 $(document).ready( function () {
+  if (!$(".turnieje").length) {
+    return null
+  }
     $('#table_id').DataTable({
       responsive: true,
       "searching": false,

@@ -7,9 +7,9 @@
   margin: 2% 0;
   text-align: center;
 }
-.jak-zaczac-gdzie .col-md-4{
+.jak-zaczac-gdzie-container{
 	text-align: center;
-	font-weight: bold;
+	font-weight: 500;
 	font-size: 1.5em;
 	padding: 25px 75px;
 	border: 1px solid;
@@ -17,4 +17,6 @@
 .jak-zaczac-text{
 	font-size: 1.3em;
 }
-.b
+.jak-zaczac-gdzie {
+	margin: 0 0 10px 0;
+}
