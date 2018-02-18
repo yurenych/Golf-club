@@ -9,20 +9,10 @@
 	color: white;
 }
 footer {
-	position: absolute;
-	bottom: 30px;
-	width: 100%;
-}
-.copyright {
-	position: absolute;
-	bottom: 0%;
-	width: 99%;
+	margin-top: 15px;
 }
 @media screen and (max-width: 992px) {
-	footer, .copyright {
-		position: static;
-	}
-	.copyright{
-		width: auto;
+	.dataTableContainer {
+		padding: 0 15px;
 	}
 }
