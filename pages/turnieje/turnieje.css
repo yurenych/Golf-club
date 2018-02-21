@@ -10,9 +10,18 @@
 }
 footer {
 	margin-top: 15px;
+} 
+.downloadButton {
+	display: block;
+	margin-top: 10px;
 }
 @media screen and (max-width: 992px) {
 	.dataTableContainer {
 		padding: 0 15px;
+	}
+}
+@media screen and (max-width: 750px) {
+	.downloadButton button {
+		width: 100%;
 	}
 }
