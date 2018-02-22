@@ -1,29 +1,15 @@
-.ground-golf-info{
-	background:;
+.ground-golf-info, .ground-golf-zasady, .ground-golf-pole, .ground-golf-sprzety{
 	list-style-type:none;
 }
-.ground-golf-zasady{
-	background: ;
-	list-style-type:none;
-}
-.ground-golf-zasady{
-	background: ;
-	list-style-type:none;
-}
-.ground-golf-pole{
-	background: ;
-	list-style-type:none;
-}
-.ground-golf-sprzety{
-	background: ;
-	list-style-type:none;
+.ground-golf-info .articleTitle h3:first-child{
+	margin-top: 0;
 }
 .ground-golf {
 	padding: 0;
 }
 .groundGolfPhoto img{
 	width:330px;
-	height: 410px;
+	height: 500px;
 }
 .wrapper {
 	background: rgba(169,169,169,.15);
@@ -46,10 +32,18 @@
 .pole-photo{
 	width: 100%;
 	height: 300px;
+	border-radius: 10px;
 }
-.golfMap{
-	width: 100%; 
-	text-align: center;
+.pole-photo:hover{
+	box-shadow: 0 0 30px rgba(0,153,0,1);
+  	transition: 0.7s ease-out;
+}
+.go-photo{
+	border-radius: 10px;
+}
+.go-photo:hover{
+	box-shadow: 0 0 30px rgba(0,153,0,1);
+  	transition: 0.7s ease-out;
 }
 .photo-intext-container {
 	margin-top: 15px;
@@ -85,6 +79,7 @@
 	margin-left: 10px;
 }
 
+
 @media screen and (max-width: 992px) {
 	.pole-photo {
 		width: 100%;
@@ -106,7 +101,7 @@
 		margin-left: 0px;
 	}
 	.groundGolfPhoto img {
-		width: 100%;
+		width:100%;
 	}
 	.roundNumber {
 		width: 20%;
@@ -116,5 +111,15 @@
 	}
 	.golfMap-text{
 		margin: 3% 2%;
+	}
+	.ground-golf-info .articleTitle h3:first-child{
+		margin-top: 5%;
+	}
+}
+
+@media screen and (min-width:450px) and (max-width:991px){
+	.groundGolfPhoto img {
+		width:auto;
+		border-left: 32%;
 	}
 }

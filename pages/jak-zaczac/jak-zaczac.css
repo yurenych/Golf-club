@@ -14,6 +14,9 @@
 	padding: 25px 75px;
 	border: 1px solid;
 }
+.jak-zaczac-gdzie-container:hover{
+	box-shadow: inset 0 3px 15px rgba(0,0,0,.4);
+}
 .jak-zaczac-text{
 	font-size: 1.3em;
 }
