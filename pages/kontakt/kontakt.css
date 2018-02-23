@@ -20,10 +20,13 @@ footer{
 	padding: 10px;
 }
 .kontaktText b:hover{
-	color: red;
+	color: rgba(0,153,0,1);
+	cursor: pointer;
+
 }
 .zadzwonText b:hover{
-	color: red;
+	color: rgba(0,153,0,1);
+	cursor: pointer;
 }
 .borderContainer {
 	position: relative;

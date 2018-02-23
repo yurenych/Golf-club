@@ -1,0 +1,9 @@
+.wrapper {
+	background: rgba(169,169,169,.15);
+	max-width: 1170px;
+	margin: 0 auto;
+}
+.headline{
+  margin: 2% 0;
+  text-align: center;
+}
