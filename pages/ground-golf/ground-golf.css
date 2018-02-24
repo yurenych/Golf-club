@@ -35,15 +35,15 @@
 	border-radius: 10px;
 }
 .pole-photo:hover{
-	box-shadow: 0 0 30px rgba(0,153,0,1);
-  	transition: 0.7s ease-out;
+	box-shadow: 0 0 15px rgba(0,153,0,1);
+  	transition: .45s ease-out;
 }
 .go-photo{
 	border-radius: 10px;
 }
 .go-photo:hover{
 	box-shadow: 0 0 30px rgba(0,153,0,1);
-  	transition: 0.7s ease-out;
+  	transition: .45s ease-out;
 }
 .photo-intext-container {
 	margin-top: 15px;
@@ -100,8 +100,8 @@
 	.containerInfo {
 		margin-left: 0px;
 	}
-	.groundGolfPhoto img {
-		width:100%;
+	.groundGolfPhoto {
+		text-align: center;
 	}
 	.roundNumber {
 		width: 20%;
@@ -117,9 +117,8 @@
 	}
 }
 
-@media screen and (min-width:450px) and (max-width:991px){
+@media screen and (max-width: 365px) {
 	.groundGolfPhoto img {
-		width:auto;
-		border-left: 32%;
+		width:100%;
 	}
 }

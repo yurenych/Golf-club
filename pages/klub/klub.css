@@ -82,11 +82,11 @@ ul, li {
   margin:3% 0 0 0;
   width:100%;
   height: auto;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 .naszKlubPhoto:hover{
-  box-shadow: 0 0 30px rgba(0,153,0,1);
-  transition: 0.7s ease-out;
+  box-shadow: 0 0 15px rgba(0,153,0,1);
+  transition: .45s ease-out;
 }
 @media screen and (max-width: 992px) {
   .history-photo {

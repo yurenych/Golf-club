@@ -30,6 +30,17 @@ footer {
 	.dataTableContainer {
 		padding: 0 15px;
 	}
+	.turniejeInfoText {
+		text-align: center;
+	}
+	.archiwum {
+		margin-top: 8px;
+		display: block;
+	}
+	.headline {
+		text-align: center;
+		margin: 5px 15px;
+	}
 }
 @media screen and (max-width: 750px) {
 	.downloadButton button {

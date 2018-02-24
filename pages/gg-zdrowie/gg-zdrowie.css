@@ -7,3 +7,16 @@
   margin: 2% 0;
   text-align: center;
 }
+.mainQuote {
+	font-size: 1.2em;
+}
+.mainTitle {
+	font-size: 0.9em;
+	padding: 0 0 0 79%;
+}
+.quoteDescription {
+	padding:1% 0 0 0;
+}
+.completion {
+	padding: 0 0 2% 0;
+}
