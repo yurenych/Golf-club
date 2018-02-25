@@ -65,3 +65,18 @@ $(document).ready( function () {
       "paging": false,
     });
 } );
+
+
+
+$(document).ready( function () {
+  $(".videoContainer").click(function(e){
+    $(".dark-body").css("display","block");
+    $(".viewVideoContainer").css("display","block");
+    $('body').addClass('stop-scrolling');
+  });
+  $(".dark-body, .closeButton").click(function(e){
+    $(".dark-body").css("display","none");
+    $(".viewVideoContainer").css("display","none");
+    $('body').removeClass('stop-scrolling');
+  });
+})
