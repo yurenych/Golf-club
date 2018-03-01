@@ -38,15 +38,21 @@
     text-align: center;
     margin: 2% 0 1% 0;
 }
-.news-photo-text{
+.news-photo-container{
 	margin: 2% 0;
 }
+
 .news-text:hover .newsTitle{
 	text-decoration: underline;
 	transition: .5s;
 }
 .newsTitle {
 	margin-top: 0;
+	padding-left: 17%;
+}
+.newsTitle:hover{
+	text-decoration: underline;
+	cursor: pointer;
 }
 .news-text:hover, .videoContainer:hover {
 	cursor: pointer;
@@ -61,7 +67,7 @@
 }
 .photo-news img{
 	width: 100%;
-	height:300px;
+	height:250px;
 }
 .photo-news{
 	position: relative;
