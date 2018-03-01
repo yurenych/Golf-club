@@ -66,17 +66,15 @@ $(document).ready( function () {
     });
 } );
 
-
-
 $(document).ready( function () {
   $(".videoContainer").click(function(e){
     $(".dark-body").css("display","block");
-    $(".viewVideoContainer").css("display","block");
+    $(".viewVideoContainer").addClass('visible');
     $('body').addClass('stop-scrolling');
   });
   $(".dark-body, .closeButton").click(function(e){
     $(".dark-body").css("display","none");
-    $(".viewVideoContainer").css("display","none");
+    $(".viewVideoContainer").removeClass('visible');
     $('body').removeClass('stop-scrolling');
   });
 })

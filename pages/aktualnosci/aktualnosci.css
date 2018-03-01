@@ -15,6 +15,7 @@
 	left: 0;
 }
 .stop-scrolling {
+	width: calc(100% - 17px);
 	height: 100%;
 	overflow: hidden;
 }
@@ -72,13 +73,21 @@
 	width: 100%;
 }
 .viewVideoContainer {
-	position: relative;
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	transition: all .3s ease-in-out;
 	display: none;
 	background: white;
 	z-index: 3;
 	width: 740px;
 	height: 385px;
 	margin: 0 auto;
+}
+.viewVideoContainer.visible {
+	display: block;
+	top: 50%;
 }
 .video {
 	position: absolute;
