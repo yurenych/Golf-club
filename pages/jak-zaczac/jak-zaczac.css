@@ -18,6 +18,7 @@
 .jak-zaczac-gdzie-container:hover{
 	box-shadow: inset 0 2px 10px rgb(179, 179, 179);
 	transition: .2s;
+	cursor: pointer;
 }
 .jak-zaczac-text{
 	font-size: 1.3em;
