@@ -117,4 +117,7 @@
 	.photoContainer, .videoContainer {
 		display: none;
 	}
+	.newsTitle {
+		padding: 0;
+	}
 }
