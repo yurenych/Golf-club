@@ -1,0 +1,49 @@
+.dataTableNav {
+	background: #009900;
+}
+.dataTableContainer {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+.sorting_desc {
+	color: white;
+}
+.archiwum{
+	display: inline-block;
+	padding: 1% 0 1% 0;
+}
+.wrapper {
+	max-width: 1170px;
+	margin: 0 auto 15px;
+}
+.turniejeInfoText{
+	font-size: 1.2em;
+}
+.turniejeInfoText b:hover{
+	color: rgba(0,153,0,1);
+	cursor: pointer;
+}
+footer {
+	margin-top: 15px;
+} 
+@media screen and (max-width: 992px) {
+	.dataTableContainer {
+		padding: 0 15px;
+	}
+	.turniejeInfoText {
+		text-align: center;
+	}
+	.archiwum {
+		margin-top: 8px;
+		display: block;
+	}
+	.headline {
+		text-align: center;
+		margin: 5px 15px;
+	}
+}
+@media screen and (max-width: 750px) {
+	.downloadButton button {
+		width: 100%;
+	}
+}

@@ -1,0 +1,104 @@
+ul, li {
+  list-style-type: none;
+}
+.wrapper {
+	max-width: 1170px;
+	margin: 0 auto 15px;
+  background:rgba(169,169,169,.2);
+}
+.club-info-statut{
+	background: ;
+	list-style-type: none;
+	text-align: center;
+}
+.club-info-komisje{
+  padding: 1% 0 2% 0;
+	list-style-type: none;
+	text-align: center;	
+}
+.histotyTitle {
+  font-size: 15px;
+  line-height: 22px;
+	margin-bottom: 2%;
+}
+.history-photo {
+  height: 180px;
+  width: 100%;
+}
+/*******************************************Slider **************/
+.sliderText {
+  background: rgba(0, 153, 0, .8);
+  margin: 0 2% 0 2%;
+  padding: 2%;
+  color: rgba(255,255,255,1);
+}
+.slick-prev:before, .slick-next:before {
+  color: #808080;
+}
+.history-photo-slider {
+  width: 100%;
+  height: 300px;
+  padding: 2% 2% 0 2%;
+}
+.headline{
+  font-size: 35px;
+  text-align: center;
+  margin: 2% 0 1% 0;
+}
+.club-info-historia{
+  background: ;
+  margin-right:0;
+  margin-left: 0;
+  list-style-type:none; 
+}
+.club-info-zarzad{
+  border-right: 1px solid;
+  margin-right:0;
+  margin-left: 0;
+  padding: 1% 0 2% 0;   
+  list-style-type:none; 
+  text-align: center;
+}
+.club-info-cele{
+  margin:0;
+  padding: 1% 4% 1%;   
+  list-style-type:none; 
+}
+.cele {
+	font-size: 16px;
+	line-height: 24px;
+}
+.club {
+	padding: 0;
+	margin: 0;
+}
+.government {
+  padding: 0;
+  list-style-type: none;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+.naszKlubPhoto{
+  margin:3% 0 0 0;
+  width:100%;
+  height: auto;
+  border-radius: 5px;
+}
+.naszKlubPhoto:hover{
+  box-shadow: 0 0 15px rgba(0,153,0,1);
+  transition: .45s ease-out;
+}
+@media screen and (max-width: 992px) {
+  .history-photo {
+    margin: 15px 0;
+  }
+  .club-info-komisje{
+    border-top: 1px solid;
+  }
+  .club-info-zarzad{
+    border-right:none;
+  }
+  .history-photo-slider{
+    height: auto;
+  }
+}

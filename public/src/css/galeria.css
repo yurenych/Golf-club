@@ -1,0 +1,51 @@
+.wrapper {
+	background: rgba(169,169,169,.2);
+	max-width: 1170px;
+	margin: 0 auto;
+	position: relative;
+}
+.mainTitle {
+	font-size: 35px;
+	text-align: center;
+	margin: 2% 0 1% 0;
+}
+.history-photo-slider {
+	width: 100%;
+	padding: 2%;
+	height: 100px;
+}
+.history-photo-slider-main {
+	width: 80%;
+	margin: 0 auto;
+	height: 475px;
+}
+.photo-content {
+	width: 100%;
+	height: 200px;
+	margin: 2% 0;
+}
+.buttonPrev img, .buttonNext img{
+	width: 30px;
+	height: 30px;
+}
+.buttonPrev {
+	position: absolute;
+	top: 22%;
+	left: 3%;
+	z-index: 2; 
+}
+.buttonNext {
+	position: absolute;
+	top: 22%;
+	right: 3%;
+	z-index: 2; 
+}
+.buttonPrev:hover, .buttonNext:hover {
+	cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+	.buttonPrev img, .buttonNext img, .slider-for, .slider-nav {
+		display: none;
+	}
+}

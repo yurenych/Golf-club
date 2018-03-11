@@ -1,0 +1,87 @@
+.wrapper {
+	max-width: 1170px;
+	margin: 0 auto 15px;
+	background: rgba(169,169,169,.15);
+}
+footer{
+	position: absolute;
+	bottom: 30px;
+	width: 100%;
+}
+.copyright {
+	position: absolute;
+	bottom: 0;
+	width: 99%;
+}
+.mainTitle {
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	font-size: 30px;
+	margin: 1% 0 1%;
+}
+.infoContainer {
+	border: 1px solid #737373;
+	border-radius: 3px;
+	text-align: center;
+	padding: 10px;
+}
+.kontaktText b:hover{
+	color: rgba(0,153,0,1);
+	cursor: pointer;
+
+}
+.zadzwonText b:hover{
+	color: rgba(0,153,0,1);
+	cursor: pointer;
+}
+.borderContainer {
+	position: relative;
+	display: block;
+}
+.kontaktText{
+	font-size: 1.5em;
+	padding: 12% 0 2% 0;
+
+}
+.zadzwonText{
+	font-size: 1.2em;
+	padding: 6.5% 0 0 0;
+}
+.poczta{
+	position: absolute;
+	width: 55px;
+	height: 50px;
+	top: 3%;
+	left: 45%;
+}
+.phone{
+	position: absolute;
+	width: 55px;
+	height: 50px;
+	top: 2%;
+	left: 46%;	
+}
+.infoContainer .headline{
+	margin: 1% 0 1% 0; 
+}
+
+@media screen and (max-width: 992px) {
+	footer, .copyright {
+		position: static;
+	}
+	.copyright{
+		width: auto;
+	}
+}
+@media screen and (max-width: 1100px) and (min-width: 992px) {
+	.kontaktText {
+		padding: 65px 0 8px 0;
+	}
+}
+@media screen and (max-width: 400px) {
+	.poczta, .phone {
+		top: -5%;
+		left: 42%;
+	}
+}
