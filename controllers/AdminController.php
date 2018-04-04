@@ -64,20 +64,37 @@ class AdminController extends Route
     // Show aktualnosci.
     public function aktualnosci()
     {
+        // Get all post from page.
         $aktualnosci_post = parent::models('DB')
             ->table('aktualnosci_post')
             ->select()
             ->get('id');
 
+        // Get all video from page.
         $aktualnosci_video = parent::models('DB')
             ->table('aktualnosci_video')
             ->select()
             ->get('id');
 
+        // Get all video from page.
+        $aktualnosci_photo = parent::models('DB')
+            ->table('aktualnosci_photo')
+            ->select()
+            ->get('id');
+
+        // Sorting desc array.
+        array_reverse($aktualnosci_post);
+
+        // Sorting desc array.
+        array_reverse($aktualnosci_photo);
+
+        // Sorting desc array.
+        array_reverse($aktualnosci_video);
 
         return [
             'admin/aktualnosci' => [
                 'aktualnosci_post' => $aktualnosci_post ?: [['id' => '']],
+                'aktualnosci_photo' => $aktualnosci_photo,
                 'aktualnosci_video' => $aktualnosci_video
             ]
         ];
@@ -90,6 +107,9 @@ class AdminController extends Route
             ->table('turnieje')
             ->select()
             ->get('id');
+
+        // Sorting desc array.
+        $turnieje = array_reverse($turnieje);
 
         return [
             'admin/turnieje' => [
@@ -111,10 +131,14 @@ class AdminController extends Route
 
         // Save all record from table.
         if($delete) {
+            // Sort desc request.
+            $post['turnieje'] = array_reverse($post['turnieje']);
+            $i = 0;
             foreach ($post['turnieje'] as $value) {
                 // Push time from operation.
                 $value = array_merge($value, [
-                    'czas_stworzenia' => time()
+                    'czas_stworzenia' => time(),
+                    'nr' => ++$i
                 ]);
 
                 // Save data.
@@ -176,6 +200,9 @@ class AdminController extends Route
 
         // Save all record from table.
         if($delete) {
+            // Sort desc request.
+            array_reverse($post['aktualnosci']);
+
             foreach ($post['aktualnosci'] as $id => $value) {
 
                 if($files['aktualnosci']['name'][$id]['obraz']) {
@@ -183,7 +210,7 @@ class AdminController extends Route
                     $images = pathinfo($files['aktualnosci']['name'][$id]['obraz']);
 
                     // Get the extension of the file and build path for save him.
-                    $image_name = time() . '.' . $images['extension'];
+                    $image_name =  base_convert(uniqid(), 16, 36) . '.' . $images['extension'];
                     $target = UPLOAD_IMAGES . 'aktualnosci/' . $image_name;
 
                     // Uploaded images.

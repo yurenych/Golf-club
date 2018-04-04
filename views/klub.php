@@ -31,18 +31,14 @@
   <?php include 'views/inc/navigation.php' ?>
   <!-- end inc navigation menu -->
 
-  <div class="wrapper">
+  <div class="wrapper container-fluid">
     <ul class="club">
-      <li class="club-info-historia container-fluid">
-        <div class="row history">
-          <h2 class="headline">Historia Ground Golfa w Polsce
+      <li class="club-info-historia">
+        <div class="history">
+          <h2 class="headline"><?= $trans['club-title-1'] ?>
           </h2>
-          <div class="col-md-12 history-photo-block">
-            <div class="col-md-12 histotyTitle">
-              Ground Golf powstał w 1982 w mieście Yurihama w Japonii. Od tego momentu, przez 36 lat
-              Ground Golf został zarejestrowany w 40 krajach i stał się międzynarodową dyscypliną
-              sportową.
-              Dr Och Bataa wraz z małżonką dr Narantuyą, zapoczątkowali w 2015 roku Ground Golfa w Polsce. Ich celem było i jest, zwiększanie świadomość zdrowego trybu życia wśród osób w każdym wieku, by poprawiać zdrowie oraz jakość codziennego życia naszego społeczeństwa.
+          <div class="row history-photo-block">
+            <div class="col-md-12 histotyTitle"><?= $trans['club-text-1'] ?>
               <br>Pierwszy oficjalny mecz na terenie Polski odbył się w
               2017 roku
             </div>
@@ -67,30 +63,25 @@
             </div>
           </div> 
           <div class="col-md-12 histotyTitle">
-          </div>
-          <div class="col-md-12 history-photo-block">
-            
-          </div>
-          <div class="col-md-12 histotyTitle">
             <br>
               Aktywność fizyczna na łonie natury jest bezcennym źródłem zdrowia i dobrego samopoczucia. Połączenie sportu z rekreacją, nie tylko pomaga zrzucić kilogramy, ale obniża także ryzyko chorób serca, naczyń krwionośnych i pobudza energię, dzięki czemu m.in. zmniejsza problemy mentalne, w tym stopień depresji. W 2017 roku, po kilku latach ćwiczeń oraz gry z przyjaciółmi i znajomymi, założyliśmy wspólnie Stowarzyszenie Klub Sportowy "AGI".W międzyczasie, reprezentanci naszego klubu uczestniczyli już dwukrotnie w światowych corocznych Mistrzostwach Ground Golfa w Japonii.
           </div>
           <div class="col-md-12 history-photo-block">
             <div class="slider">
               <div class="photo-intext-container">
-                <img class="history-photo-slider" src="/public/src/img/history/japan2016(1).jpg">
+                <img class="history-photo-slider" src="/public/src/img/galeria/content/japan2016(1).jpg">
                 <div class="sliderText">Nasza drużyna na mistrzowstwach w Japonii 2016</div>
               </div>
               <div class="photo-intext-container">
-                <img class="history-photo-slider" src="/public/src/img/history/japan2016(2).jpg">
+                <img class="history-photo-slider" src="/public/src/img/galeria/content/japan2016(2).jpg">
                 <div class="sliderText">Uroczyste otwarcie mistrzoswstw w Japonii 2016</div>
               </div>
               <div class="photo-intext-container">
-                <img class="history-photo-slider" src="/public/src/img/history/japan2016(3).jpg">
+                <img class="history-photo-slider" src="/public/src/img/galeria/content/japan2016(3).jpg">
                 <div class="sliderText">Nasza drużyna na mistrzowstwach w Japonii 2016</div>
               </div>
               <div class="photo-intext-container">
-                <img class="history-photo-slider" src="/public/src/img/history/japan2016(4).jpg">
+                <img class="history-photo-slider" src="/public/src/img/galeria/content/japan2016(4).jpg">
                 <div class="sliderText">Nasza drużyna na mistrzowstwach w Japonii 2016</div>
               </div>
             </div>
@@ -102,37 +93,37 @@
             <div class="col-md-12 history-photo-block">
             <div class="slider">
               <div class="photo-intext-container">
-                <img class="history-photo-slider" src="/public/src/img/history/japan2017(1).jpg">
+                <img class="history-photo-slider" src="/public/src/img/galeria/content/japan2017(1).jpg">
                 <div class="sliderText">Nasza drużyna na mistrzowstwachw Japonii 2017</div>
               </div>
               <div class="photo-intext-container">
-                <img class="history-photo-slider" src="/public/src/img/history/japan2017(2).jpg">
+                <img class="history-photo-slider" src="/public/src/img/galeria/content/japan2017(2).jpg">
                 <div class="sliderText">Nasza drużyna na mistrzowstwach w Japonii 2017</div>
               </div>
               <div class="photo-intext-container">
-                <img class="history-photo-slider" src="/public/src/img/history/japan2017(10).jpg">
+                <img class="history-photo-slider" src="/public/src/img/galeria/content/japan2017(10).jpg">
                 <div class="sliderText">Uroczyste otwarcie mistrzoswstw w Japonii 2017</div>
               </div>
               <div class="photo-intext-container">
-                <img class="history-photo-slider" src="/public/src/img/history/japan2017(3).jpg">
+                <img class="history-photo-slider" src="/public/src/img/galeria/content/japan2017(3).jpg">
                 <div class="sliderText">Inni uczęstnicy Pucharu w Japonii 2017</div>
               </div>
             </div>
           </div>
         </div>
       </li>
-      <li class="club-info-cele container-fluid">
-        <div class="row cele">
-          <h2 class="headline">Nasz klub</h2>
+      <li class="club-info-cele">
+        <div class="cele">
+          <h2 class="headline"><?= $trans['club-title-2'] ?></h2>
           Klub nasz, poza wspólnymi treningami, organizuje cykl turniejów oraz prezentacje i szkolenia popularyzujące Ground Golfa. Staramy się w miarę możliwości popularyzować ten sport oraz współpracujemy z innymi europejskimi klubami, aby zorganizować turnieje europejskie. Aktualnie przygotowujemy się do organizacji w przyszłym roku w Polsce Mistrzostw Europy oraz do uczestnictwa w World Master Games Japan 2021.
           <div class="KlubPhoto">
             <img class="naszKlubPhoto" src="/public/src/img/history/klub1.jpg">
           </div>
         </div>
       </li>
-      <li class="club-info-cele container-fluid">
+      <li class="club-info-cele">
         <div class="cele">
-          <h2 class="headline">Cele działania klubu</h2>
+          <h2 class="headline"><?= $trans['club-title-3'] ?></h2>
             <br>1. Rozwijanie róznych form kultury fizycznej;
             <br>2. Wspieranie rozwoju kultury fizycznej a zwłaszcza propagowanie sportu Ground Golf;
             <br>3. Integrowanie miedzypokoleniowe celem aktywizowania wszystkich grup wiekowych;
@@ -151,11 +142,11 @@
             <br>16. Organizowanie zawodów sportowych, happeningów, imprez o znaczeniu regionalnym, krajowym i miedzynarodowym;
         </div>
       </li>
-      <li class="container-fluid">
+      <li class="">
         <ul class="government row">
           <li class="club-info-zarzad col-md-6">
             <div class="zarzad">
-              <h2 class="headline">Zarząd
+              <h2 class="headline"><?= $trans['club-title-4'] ?>
               </h2>
               <br><b>Prezes:</b> Och Bataa
               <br><b>Sekretarz:</b> Edwin Zbigniew Truksa
@@ -164,7 +155,7 @@
           </li>
           <li class="club-info-komisje col-md-6">
             <div class="komisje">
-              <h2 class="headline">Komisje rewizyjne
+              <h2 class="headline"><?= $trans['club-title-5'] ?>
               </h2>
               <br>Anna Teresa Łysek
               <br>Tatiana Michalewicz-Filus

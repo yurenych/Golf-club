@@ -13,12 +13,16 @@ class DB
      */
     public function __construct()
     {
+        // Connect to DB.
         $this->mysqli = new mysqli(
             DB_LOCALHOST,
             DB_USERNAME,
             DB_PASSWORD,
             DB_DATABASE
         );
+
+        // Set charset to db.
+        $this->mysqli->set_charset("utf8");
     }
 
     /**

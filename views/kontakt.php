@@ -28,24 +28,30 @@
   <!-- end inc navigation menu -->
 
   <div class="wrapper row">
-    <div class="col-md-12 mainTitle">Skontaktuj się z nami</div>
+    <div class="col-md-12 mainTitle"><?= $trans['contact-us'] ?></div>
+    <div class="col-md-12 infoContainer mainText">
+    	<br><b><?= $trans['sport-club'] ?></b>
+    	<br><?= $trans['street'] ?>
+    	<br>02-972 <?= $trans['warszawa'] ?>
+    	<br>Bank Zachodni WBK <?= $trans['bank-account'] ?><b> 76 1090 2851 0000 0001 3610 4293</b> 
+    </div>
     <div class="col-md-6 infoContainer">
       <h3 class="headline">
-        Napisz nam
+        <?= $trans['write-to-us'] ?>
       </h3>
       <div class="borderContainer">
         <div class="napiszNam">
           <img class='poczta' src="/public/src/img/mail-icon.png">
         </div>
         <div class="kontaktText">
-          <b>groundgolf@life.pl
+          <b>info@groundgolf.pl
           </b>
         </div>
       </div>
     </div>
     <div class="col-md-6 infoContainer">
       <h3 class="headline">
-        Zadzwoń do nas 
+        <?= $trans['call-us'] ?>
       </h3>
       <div class="borderContainer">
         <div class="zadzwonDoNas">
@@ -58,7 +64,14 @@
       </div>
     </div>
   </div>
-
+  <div class="">
+    <div class="partnersWrapper">
+      <h3 class="mainTitle"><?= $trans['our-partners'] ?></h3>
+      <div class="partnersPhoto">
+        <img src="/public/src/img/kontakt/rotary-club.png">
+      </div>
+    </div>
+  </div>
   <!-- inc footer -->
   <?php include 'views/inc/footer.php' ?>
   <!-- inc footer -->

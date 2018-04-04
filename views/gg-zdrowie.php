@@ -41,10 +41,16 @@
     </h3>
     <div>Celem naszych badań było określenie roli i znaczenia sportu w społeczeństwie, jak również promowanie jego dalszego rozwoju, w oparciu o miarodajne badania naukowe.
     </div>
+    <div class="photoContainer">
+    	<img src="/public/src/img/gg-zdrowie/gg-zdrowie1.jpg">
+    </div>
     <h3>
       2.Przedmiot badań
     </h3>
     <div>Podstawę badania stanowiła ankieta przeprowadzona wśród zawodników, którzy w 2010 r. uczestniczyli w szkoleniu trenerskim 1 i 2 stopnia oraz równolegle wśród przeciętnych przedstawicieli podobnych grup wiekowych. <br>W grupie zawodników Ground Golfa: 175 mężczyzn i 91 kobiet, razem 166 osób.<br>W grupie osób niezwiązanych z Ground Golfem: 122 mężczyzn i 137 kobiet, razem 259 osób.<br>W sumie:  525 osób (297 mężczyzn i 228 kobiet).
+    </div>
+    <div class="photoContainer">
+    	<img src="/public/src/img/gg-zdrowie/gg-zdrowie2.jpg">
     </div>
     <h3>
       3.Zakres badań
@@ -62,10 +68,16 @@
       </h4> 
       Syndrom lokomocyjny jest stanem zaburzenia, w którym mamy do czynienia z utrudnieniem tak podstawowych funkcji układu ruchowego jak chodzenie czy nawet stanie w wyprostowanej pozycji. Dzieje się tak na skutek pogorszenia stanu elementów układu ruchowego takich jak kości, mięśnie, ścięgna. Jeśli stan taki się przedłuża może zajść konieczności hospitalizacji bądź rehabilitacji. W części pt. „Lokomo test” zdolności ruchowe oraz wytrzymałość organizmu badano za pomocą 3 testów „Testu wyprostowanej postawy” „Test dwóch kroków” oraz „Test Lokomo 25”.
     </div>
+    <div class="photoContainer">
+    	<img src="/public/src/img/gg-zdrowie/gg-zdrowie3.jpg">
+    </div>
     <h3>
       4.Wyniki badań
     </h3>
-    <div> W porównaniu z przeciętnymi osobami, wśród zawodników Ground Golfa ryzyko zapadnięciana pierwszy lub drugi stopień syndromu lokomocyjnego (Lokomo) wyższe niż 40% występuje rzadko.<br><br>1 stopień Lokomo: Stan rozpoczynającego się osłabienia elementów układu ruchowego(kości, mięśnie, ścięgna) oraz układu nerwowego.<br>2 stopień Lokomo: Stan pogorszonej jakości pracy elementów układu ruchowego (kości,mięśnie, ścięgna) i układu nerwowego. <br><br>Badania w ramach testu dwóch kroków wykazały, iż zakres kroku zawodnika Ground Golfa jest większy niż przeciętnej osoby. Skracanie się zakresu kroku powoduje zmniejszenie szybkości ruchu, zmniejszenie gibkości narządów ruchowych, zwiększa ryzyko możliwych wypadków takich jak chociażby potknięcia się. Aby zapobiegać temu w okresie starzenia się oraz wieku podeszłym należy pracować nad utrzymaniem zrównoważonej wielkości kroku.<br><br> Wyniki badań wykazują także znacznie mniejsze problemy psychiczne, bądź stopień depresji u zawodników Ground Golfa niż u przeciętnych osób niezwiązanych z Ground Golfem.
+    <div> W porównaniu z przeciętnymi osobami, wśród zawodników Ground Golfa ryzyko zapadnięcia na pierwszy lub drugi stopień syndromu lokomocyjnego (Lokomo) wyższe niż 40% występuje rzadko.<br><br>1 stopień Lokomo: Stan rozpoczynającego się osłabienia elementów układu ruchowego(kości, mięśnie, ścięgna) oraz układu nerwowego.<br>2 stopień Lokomo: Stan pogorszonej jakości pracy elementów układu ruchowego (kości,mięśnie, ścięgna) i układu nerwowego. <br><br>Badania w ramach testu dwóch kroków wykazały, iż zakres kroku zawodnika Ground Golfa jest większy niż przeciętnej osoby. Skracanie się zakresu kroku powoduje zmniejszenie szybkości ruchu, zmniejszenie gibkości narządów ruchowych, zwiększa ryzyko możliwych wypadków takich jak chociażby potknięcia się. Aby zapobiegać temu w okresie starzenia się oraz wieku podeszłym należy pracować nad utrzymaniem zrównoważonej wielkości kroku.<br><br> Wyniki badań wykazują także znacznie mniejsze problemy psychiczne, bądź stopień depresji u zawodników Ground Golfa niż u przeciętnych osób niezwiązanych z Ground Golfem.
+    </div>
+    <div class="photoContainer">
+    	<img src="/public/src/img/gg-zdrowie/gg-zdrowie4.jpg">
     </div>
     <h3>
       5.Podsumowanie

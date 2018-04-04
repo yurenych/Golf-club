@@ -13,24 +13,24 @@ $('#addRow').on('click', function addRow() {
         success: function (id) {
             if(id) {
                 var old_id = $('table#table_id tbody tr:first').data('id'); // Declare id for replace.
+                var last_nr = parseInt($('table#table_id tbody tr:first input:text[readonly]').val()); // Declare id for replace.
 
                 // Clone and clear new row.
                 $('table#table_id tbody tr:first')
                     .clone()
-                    .insertBefore('tr:last')
+                    .insertBefore('tbody tr:first')
                     .find('input')
                     .val('')
                     .parent()
+                    .find('input:text[readonly]')
+                    .val((isNaN(last_nr) ? 0 : last_nr) + 1)
                     .parent()
-                    .attr('data-id', id);
-
-                console.log(old_id, id);
-
-                // Replace attr name
-                $('table#table_id tbody tr:eq(-2) td input').each(function () {
-                    var name = $(this).attr('name'); // Get old attr name.
-                    $(this).attr('name', name.replace(old_id, id)); // Replace attr name.
-                });
+                    .parent()
+                    .attr('data-id', id)
+                    .find('td input').each(function () {
+                        var name = $(this).attr('name'); // Get old attr name.
+                        $(this).attr('name', name.replace(old_id, id)); // Replace attr name.
+                    });
             }
         }
     });

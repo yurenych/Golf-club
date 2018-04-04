@@ -16,22 +16,18 @@ $('#addRow').on('click', function addRow() {
                 var old_id = $('form > div:first').data('id'); // Declare id for replace.
 
                 // Clone and clear new row.
-                $('form > div:first')
+                $('form > div:eq(0)')
                     .clone()
-                    .insertAfter('form > div:last')
-                    .find('input:text, textarea')
-                    .val('')
+                    .insertBefore('form > div:first')
+                    .find('img')
+                    .attr('src', '')
                     .parent()
                     .parent()
-                    .find('div.videoContainer')
-                    .remove();
-
-                // Replace attr name
-                $('form > div:last').find('input, textarea').each(function () {
-                   var name = $(this).attr('name'); // Get old attr name.
-                   $(this).attr('name', name.replace(old_id, id)); // Replace attr name.
-                });
-
+                    .attr('data-id', id)
+                    .find('input, textarea').each(function () {
+                        // Replace attr name and clear values.
+                        $(this).val('').attr('name', $(this).attr('name').replace(old_id, id));
+                    });
             }
         }
     });
@@ -41,7 +37,7 @@ $('#addRow').on('click', function addRow() {
 $('form').on('click', '#removeRow',function removeRow() {
     var _token = $('input[name="_token"]').val(); // Declare csrf-token for validation.
     var active_element = $(this).parent(); // Declare active element for removed.
-    var id = active_element.parent().find('div:first').data('id'); // Declare id record for removed.
+    var id = active_element.data('id'); // Declare id record for removed.
     var countElements = $('form > div').length; // Declare count div from table.
 
     // If count tr from table < 2(active and last) not delete this element.
@@ -61,8 +57,6 @@ $('form').on('click', '#removeRow',function removeRow() {
             id: id
         },
         success: function (result) {
-            console.log(result);
-
             if(result) {
                 active_element.remove();
             }

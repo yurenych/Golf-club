@@ -2,6 +2,8 @@
 
 Class Route
 {
+    static $languages;
+
     // Start routing from application.
     static function start()
     {
@@ -11,6 +13,13 @@ Class Route
         // Get request method from request.
         $request_method = $_SERVER['REQUEST_METHOD'];
 
+        // Search languages from url.
+        if($request_method === 'GET' && boolval(in_array(current($url), $GLOBALS['LANGUAGES']))) {
+            self::$languages = self::setLanguages(array_shift($url));
+        } else {
+            self::$languages = self::setLanguages();
+        }
+
         // Route to controllers.
         switch([$request_method, current($url)]) {
             // Admin space GET request-method.
@@ -19,7 +28,7 @@ Class Route
                     case ['GET', 'galeria']:
                         $to_view = self::controllers('IndexController')->galeria();
                         return self::views(key($to_view), array_shift($to_view));
-
+                    
                     case ['GET', 'gg-zdrowie']:
                         return self::views('gg-zdrowie');
 
@@ -143,6 +152,10 @@ Class Route
     // Include views.
     public function views($filename, $data = null)
     {
+        // Send to view languages.
+        $trans = self::$languages['trans'];
+        $lang_id = self::$languages['lang_id'];
+
         require_once (__DIR__ . DS . '..' . DS . "views" . DS . $filename . '.php');
     }
 
@@ -150,5 +163,30 @@ Class Route
     public function redirect($path)
     {
         die(header("Location:{$path}"));
+    }
+
+    // Set languages.
+    public function setLanguages($lang_id = null)
+    {
+        // If not isset language set default value.
+        if(!$lang_id){
+            $lang_id = $GLOBALS['LANGUAGES'][0];
+        }
+
+        // Get languages from DB.
+        $trans = self::models('DB')
+            ->table('languages')
+            ->select("name, {$lang_id}")
+            ->get('name');
+
+        // Build languages array.
+        foreach ($trans as $key => $value){
+            $trans[$key] = $value[$lang_id];
+        }
+
+        return [
+            'lang_id' => $lang_id,
+            'trans' => $trans,
+        ];
     }
 }

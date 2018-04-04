@@ -46,17 +46,15 @@
           </tr>
       </thead>
       <tbody>
-
-        <?php foreach ($data['turnieje'] as $turnieje) { ?>
-          <tr>
-              <td><?= $turnieje['nr']?></td>
-              <td><?= $turnieje['data']?></td>
-              <td><?= $turnieje['czas']?></td>
-              <td><?= $turnieje['nazva']?></td>
-              <td><?= $turnieje['miejsce']?></td>
-          </tr>
-        <?php } ?>
-
+          <?php foreach ($data['turnieje'] as $turnieje) { ?>
+              <tr>
+                  <td><?= $turnieje['nr']?></td>
+                  <td><?= $turnieje['data']?></td>
+                  <td><?= $turnieje['czas']?></td>
+                  <td><?= $turnieje['nazva']?></td>
+                  <td><?= $turnieje['miejsce']?></td>
+              </tr>
+          <?php } ?>
       </tbody>
     </table>
 
@@ -70,7 +68,7 @@
     </div>
 
     <div class="turniejeInfoText">
-      Zapisy przyjmujemy pod mailem <b>turnieje@groundgolf.pl</b> , ew. numerem telefonu <b>603 563 399</b>.
+      Zapisy przyjmujemy pod mailem <b>info@groundgolf.pl</b> , ew. numerem telefonu <b>603 563 399</b>.
     </div>
 
   </div>

@@ -30,13 +30,13 @@
 }
 .buttonPrev {
 	position: absolute;
-	top: 22%;
+	top: 17%;
 	left: 3%;
 	z-index: 2; 
 }
 .buttonNext {
 	position: absolute;
-	top: 22%;
+	top: 17%;
 	right: 3%;
 	z-index: 2; 
 }

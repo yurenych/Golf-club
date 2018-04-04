@@ -57,7 +57,7 @@
               <?php foreach ($data['turnieje'] as $turnieje) { ?>
                   <tr data-id="<?= $turnieje['id'] ?>">
                       <td>
-                          <input type="text" name="turnieje[<?= $turnieje['id'] ?>][nr]" value="<?= $turnieje['nr'] ?>">
+                          <input type="text" name="turnieje[<?= $turnieje['id'] ?>][nr]" value="<?= $turnieje['nr'] ?>" readonly>
                       </td>
                       <td>
                           <input type="text" name="turnieje[<?= $turnieje['id'] ?>][data]" value="<?= $turnieje['data'] ?>">

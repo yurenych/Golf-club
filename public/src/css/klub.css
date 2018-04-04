@@ -60,8 +60,7 @@ ul, li {
   text-align: center;
 }
 .club-info-cele{
-  margin:0;
-  padding: 1% 4% 1%;   
+  margin:0; 
   list-style-type:none; 
 }
 .cele {
@@ -87,6 +86,12 @@ ul, li {
 .naszKlubPhoto:hover{
   box-shadow: 0 0 15px rgba(0,153,0,1);
   transition: .45s ease-out;
+}
+.slick-prev{
+	left: -12px;		
+}
+.slick-next{
+	right: -12px;	
 }
 @media screen and (max-width: 992px) {
   .history-photo {
