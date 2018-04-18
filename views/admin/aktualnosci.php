@@ -37,32 +37,37 @@
       <div class="row mainContainer">
           <div class="col-md-2 photoWrapper">
               <h3 class = "sideBarTitle">
-                  Nasze zdjęcia
+                  <?= $trans['our-photos'] ?>
               </h3>
-              <?php foreach ($data['aktualnosci_photo'] as $aktualnosci_photo) { ?>
-                  <div class="videoContainer">
-                      <img src="<?= $aktualnosci_photo['obraz'] ?>" class="previewVideo">
-                      <div class="videoDescription"><?= $aktualnosci_photo['opis'] ?></div>
-                  </div>
-                  <div class="viewVideoContainer">
-                      <img src="/public/src/img/closeButton.png" class="closeButton">
-                      <iframe width="560" height="315" src="https://www.youtube.com/embed/<?= $aktualnosci_photo['wideo'] ?>" allowscriptaccess="always" frameborder="0" allow="autoplay; encrypted-media" class="video" allowfullscreen></iframe>
-                  </div>
-              <?php } ?>
+              <form action="/admin/aktualnosci/save_photo" method="POST" enctype="multipart/form-data">
+                  <input type="hidden" name="_token" value="<?= CSRF_TOKEN ?: '' ?>">
+                  <?php foreach ($data['aktualnosci_photo'] as $aktualnosci_photo) { ?>
+                      <img src="/public/src/img/aktualnosci/photo/<?= $aktualnosci_photo['obraz'] ?>" class="previewPhoto">
+                      <input type="text" name="aktualnosci[<?= $aktualnosci_photo['id'] ?>][opis]" value="<?= $aktualnosci_photo['opis'] ?>">
+                      <input type="file" name="aktualnosci[<?= $aktualnosci_photo['id'] ?>][obraz]" accept="image/*">
+
+                      <input type="submit" name="remove[<?= $aktualnosci_photo['id'] ?>]" value="x">
+                  <?php } ?>
+
+                  <input type="submit" name="add" value="+">
+                  <input type="submit" name="save" value="Save">
+              </form>
           </div>
           <div class="wrapper col-md-8">
               <div class="headline"><?= $trans['NEWS'] ?></div>
               <div class="news-container">
                   <form action="/admin/aktualnosci/save" method="POST" enctype="multipart/form-data">
+                      <input type="hidden" name="_token" value="<?= CSRF_TOKEN ?: '' ?>">
                       <?php $i = 0; ?>
                       <?php foreach ($data['aktualnosci_post'] as $aktualnosci_post) { ?>
+
                           <div class="news-photo-container row" data-id="<?= $aktualnosci_post['id'] ?>">
                               <a id="removeRow">x</a>
                               <h3 class="newsTitle">
                                   <input type="text" name="aktualnosci[<?= $aktualnosci_post['id'] ?>][temat]" value="<?= $aktualnosci_post['temat'] ?>">
                               </h3>
                               <div class="photo-news col-md-3 col-md-offset-2">
-                                  <img src="/public/src/img/aktualnosci/<?= $aktualnosci_post['obraz'] ?>">
+                                  <img src="/public/src/img/aktualnosci/post/<?= $aktualnosci_post['obraz'] ?>">
                                   <input type="file" name="aktualnosci[<?= $aktualnosci_post['id'] ?>][obraz]" accept="image/*">
                               </div>
                               <div class="news-text col-md-5">
@@ -80,18 +85,28 @@
           </div>
           <div class="col-md-2 videoWrapper">
               <h3 class = "sideBarTitle">
-                  Nasze filmy
+                  <?= $trans['our-films'] ?>
               </h3>
-              <?php foreach ($data['aktualnosci_video'] as $aktualnosci_video) { ?>
-                  <div class="videoContainer">
-                      <img src="<?= $aktualnosci_video['obraz'] ?>" class="previewVideo">
-                      <div class="videoDescription"><?= $aktualnosci_video['opis'] ?></div>
-                  </div>
-                  <div class="viewVideoContainer">
-                      <img src="/public/src/img/closeButton.png" class="closeButton">
-                      <iframe width="560" height="315" src="https://www.youtube.com/embed/<?= $aktualnosci_video['wideo'] ?>" allowscriptaccess="always" frameborder="0" allow="autoplay; encrypted-media" class="video" allowfullscreen></iframe>
-                  </div>
-              <?php } ?>
+              <form action="/admin/aktualnosci/save_wideo" method="POST" enctype="multipart/form-data">
+                  <input type="hidden" name="_token" value="<?= CSRF_TOKEN ?: '' ?>">
+                  <?php foreach ($data['aktualnosci_video'] as $aktualnosci_video) { ?>
+
+                      <div class="videoContainer">
+                          <img src="https://i.ytimg.com/vi_webp/<?= $aktualnosci_video['wideo'] ?>/hqdefault.webp" class="previewVideo">
+                      </div>
+                      <div class="viewVideoContainer">
+                          <img src="/public/src/img/closeButton.png" class="closeButton">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/<?= $aktualnosci_video['wideo'] ?>" allowscriptaccess="always" frameborder="0" allow="autoplay; encrypted-media" class="video" allowfullscreen></iframe>
+                      </div>
+                      <input type="submit" name="remove[<?= $aktualnosci_video['id'] ?>]" value="x">
+
+                      <input type="text" name="aktualnosci[<?= $aktualnosci_video['id'] ?>][opis]" value="<?= $aktualnosci_video['opis'] ?>">
+                      <input type="text" name="aktualnosci[<?= $aktualnosci_video['id'] ?>][wideo]" value="<?= $aktualnosci_video['wideo'] ?>">
+                  <?php } ?>
+
+                  <input type="submit" name="add" value="+">
+                  <input type="submit" name="save" value="Save">
+              </form>
           </div>
       </div>
   </div>

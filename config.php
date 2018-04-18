@@ -8,9 +8,7 @@ define('DS', DIRECTORY_SEPARATOR);
 
 // Where upload images.
 define('UPLOAD_IMAGES', 'public/src/img/');
-define('IMAGES_GALERIA_SLIDER_FOR', UPLOAD_IMAGES . 'galeria/slider-for/');
-define('IMAGES_GALERIA_SLIDER_NAV', UPLOAD_IMAGES . 'galeria/slider-nav/');
-define('IMAGES_GALERIA_CONTENT', UPLOAD_IMAGES . 'galeria/content/');
+define('IMAGES_GALERIA', UPLOAD_IMAGES . 'galeria/');
 
 // Set anti csrf-attack.
 define('CSRF_TOKEN', '601d4e8b5fd64071b944e774a0dfe26a');

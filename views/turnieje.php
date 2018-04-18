@@ -30,19 +30,17 @@
   <!-- end inc navigation menu -->
 
  <div class="wrapper"> 
-  <h3 class="headline">
-    Serdecznie zapraszamy do udziału w tegorocznych turniejach organizowanych przez AGI Ground Golf Klub!
-  </h3>
+  <h3 class="headline"><?= $trans['turnieje-title']?></h3>
   <div class="dataTableContainer">
 
     <table id="table_id" class="display">
       <thead class="dataTableNav">
           <tr>
-              <th>Nr</th>
-              <th>Data</th>
-              <th>Czas</th>
-              <th>Nazwa</th>
-              <th>Miejsce</th>
+              <th><?= $trans['turnieje-table-1']?></th>
+              <th><?= $trans['turnieje-table-2']?></th>
+              <th><?= $trans['turnieje-table-3']?></th>
+              <th><?= $trans['turnieje-table-4']?></th>
+              <th><?= $trans['turnieje-table-5']?></th>
           </tr>
       </thead>
       <tbody>
@@ -57,7 +55,7 @@
           <?php } ?>
       </tbody>
     </table>
-
+<!--
     <div class="archiwum">
       <a href="../../tuturniejeCalendars/calendar2016.pdf" class="downloadButton" download>
         <button>Turnieje 2017.pdf</button>
@@ -65,10 +63,9 @@
       <a href="../../tuturniejeCalendars/calendar2017.pdf" class="downloadButton" download>
         <button>Turnieje 2016.pdf</button>
       </a>
-    </div>
+    </div> -->
 
-    <div class="turniejeInfoText">
-      Zapisy przyjmujemy pod mailem <b>info@groundgolf.pl</b> , ew. numerem telefonu <b>603 563 399</b>.
+    <div class="turniejeInfoText"><?= $trans['turnieje-text-1']?> <b>info@groundgolf.pl</b><?= $trans['turnieje-text-2']?> <b>603 563 399</b>.
     </div>
 
   </div>

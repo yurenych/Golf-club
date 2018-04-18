@@ -61,6 +61,46 @@ class AdminController extends Route
         }
     }
 
+    public function galeria()
+    {
+        // Open dir and scan files.
+        $images = scandir(IMAGES_GALERIA);
+
+        // Remove . and .. from dir.
+        unset($images[array_search('.', $images)], $images[array_search('..', $images)]);
+
+        return [
+            'admin/galeria' => [
+                'images' => $images,
+            ]
+        ];
+    }
+
+    public function galeriaSave($post, $files)
+    {
+        switch (true) {
+            case isset($post['delete']):
+                if(file_exists(getcwd() . key($post['delete']))){
+                    unlink(getcwd() . key($post['delete']));
+                }
+                break;
+
+            case isset($post['save']):
+                foreach ($files['obraz']['tmp_name'] as $key => $tmp_name) {
+                    // Get the extension of the file and build path for save him.
+
+                    $image_name =  base_convert(uniqid(), 16, 36) . '.' . pathinfo($files['obraz']['name'][$key], PATHINFO_EXTENSION);
+                    $target = UPLOAD_IMAGES . 'galeria/' . $image_name;
+
+                    // Uploaded images.
+                    move_uploaded_file($tmp_name, $target);
+                }
+                break;
+            }
+
+        return $this->redirect('/admin/galeria');
+    }
+
     // Show aktualnosci.
     public function aktualnosci()
     {
@@ -200,9 +240,6 @@ class AdminController extends Route
 
         // Save all record from table.
         if($delete) {
-            // Sort desc request.
-            array_reverse($post['aktualnosci']);
-
             foreach ($post['aktualnosci'] as $id => $value) {
 
                 if($files['aktualnosci']['name'][$id]['obraz']) {
@@ -211,7 +248,7 @@ class AdminController extends Route
 
                     // Get the extension of the file and build path for save him.
                     $image_name =  base_convert(uniqid(), 16, 36) . '.' . $images['extension'];
-                    $target = UPLOAD_IMAGES . 'aktualnosci/' . $image_name;
+                    $target = UPLOAD_IMAGES . 'aktualnosci/post/' . $image_name;
 
                     // Uploaded images.
                     move_uploaded_file($files['aktualnosci']['tmp_name'][$id]['obraz'], $target);
@@ -221,7 +258,7 @@ class AdminController extends Route
 
                 // Push time from operation.
                 $value = array_merge($value, [
-                    'obraz' => $image_name ?: '',
+                    'obraz' => $image_name ? $image_name : '',
                     'czas_stworzenia' => time()
                 ]);
 
@@ -229,6 +266,132 @@ class AdminController extends Route
                 parent::models('DB')
                     ->table('aktualnosci_post')
                     ->insert('sssi', $value);
+            }
+        }
+
+        return $this->redirect('/admin/aktualnosci');
+    }
+
+    // Action photo form from aktualnosci.
+    public function aktualnosciSavePhoto($post, $files)
+    {
+        if($post['_token'] === CSRF_TOKEN) {
+            switch (true) {
+                case isset($post['add']):
+                    parent::models('DB')
+                        ->table('aktualnosci_photo')
+                        ->insert('ssi', [
+                            'obraz' => '',
+                            'opis' => '',
+                            'czas_stworzenia' => time(),
+                        ]);
+                    break;
+
+                case isset($post['remove']):
+                    parent::models('DB')
+                        ->table('aktualnosci_photo')
+                        ->delete()
+                        ->where('id = ' . key($post['remove']) . '')
+                        ->query();
+                    break;
+
+                case isset($post['save']):
+                    // Get isset images from DB.
+                    $active_images = parent::models('DB')
+                        ->table('aktualnosci_photo')
+                        ->select('id, obraz')
+                        ->get('id');
+
+                    // Delete all record from table.
+                    if($post['aktualnosci']) {
+                        $delete = parent::models('DB')
+                            ->table('aktualnosci_photo')
+                            ->delete()
+                            ->query();
+                    }
+
+                    // Save all record from table.
+                    if($delete) {
+                        // Sort desc request.
+                        foreach ($post['aktualnosci'] as $id => $value) {
+
+                            if($files['aktualnosci']['name'][$id]['obraz']) {
+                                // Get images.
+                                $images = pathinfo($files['aktualnosci']['name'][$id]['obraz']);
+
+                                // Get the extension of the file and build path for save him.
+                                $image_name =  base_convert(uniqid(), 16, 36) . '.' . $images['extension'];
+                                $target = UPLOAD_IMAGES . 'aktualnosci/photo/' . $image_name;
+
+                                // Uploaded images.
+                                move_uploaded_file($files['aktualnosci']['tmp_name'][$id]['obraz'], $target);
+                            } else {
+                                $image_name = $active_images[$id]['obraz'];
+                            }
+
+                            // Push time from operation.
+                            $value = array_merge($value, [
+                                'obraz' => $image_name ?: '',
+                                'czas_stworzenia' => time()
+                            ]);
+
+                            // Save data.
+                            parent::models('DB')
+                                ->table('aktualnosci_photo')
+                                ->insert('ssi', $value);
+                        }
+                    }
+                    break;
+            }
+        }
+
+        return $this->redirect('/admin/aktualnosci');
+    }
+
+    // Action wideo form from aktualnosci.
+    public function aktualnosciSaveWideo($post)
+    {
+        if($post['_token'] === CSRF_TOKEN) {
+            switch (true) {
+                case isset($post['add']):
+                    parent::models('DB')
+                        ->table('aktualnosci_video')
+                        ->insert('ssi', [
+                            'wideo' => '',
+                            'opis' => '',
+                            'czas_stworzenia' => time(),
+                        ]);
+                    break;
+
+                case isset($post['remove']):
+                    parent::models('DB')
+                        ->table('aktualnosci_video')
+                        ->delete()
+                        ->where('id = ' . key($post['remove']) . '')
+                        ->query();
+                    break;
+
+                case isset($post['save']):
+                    // Delete all record from table.
+                    if($post['aktualnosci']) {
+                        $delete = parent::models('DB')
+                            ->table('aktualnosci_video')
+                            ->delete()
+                            ->query();
+                    }
+
+                    // Save all record from table.
+                    if($delete) {
+                        foreach ($post['aktualnosci'] as $id => $value) {
+                            // Save data.
+                            parent::models('DB')
+                                ->table('aktualnosci_video')
+                                ->insert('ssi', array_merge($value, [
+                                    'czas_stworzenia' => time()
+                                ]));
+                        }
+                    }
+                    break;
             }
         }
 

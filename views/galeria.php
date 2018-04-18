@@ -31,29 +31,36 @@
   <!-- end inc navigation menu -->
 
   <div class="wrapper container-fluid">
-    <div class="mainTitle">Galeria</div>
+    <div class="mainTitle"><?= $trans['gallery'] ?></div>
     <div class="buttonPrev"><img src="/public/src/img/left-arrow.png"></div>
     <div class="slider-for">
-      <?php foreach($data['images_slider_for'] as $image) { ?>
-        <div class="photo-intext-container">
-          <img class="history-photo-slider-main" src="<?= '/' . IMAGES_GALERIA_SLIDER_FOR . $image ?>">
-        </div>
+
+      <?php if(isset($data['images'])) { ?>
+        <?php foreach($data['images'] as $image) { ?>
+          <div class="photo-intext-container">
+            <img class="history-photo-slider-main" src="<?= '/' . IMAGES_GALERIA . $image ?>">
+          </div>
+        <?php } ?>
       <?php } ?>
     </div>
 
     <div class="buttonNext"><img src="/public/src/img/right-arrow.png"></div>
     <div class="slider-nav">
-      <?php foreach($data['images_slider_nav'] as $image) { ?>
-        <div class="photo-intext-container">
-          <img class="history-photo-slider" src="<?= '/' . IMAGES_GALERIA_SLIDER_NAV . $image ?>">
-        </div>
+      <?php if(isset($data['images'])) { ?>
+        <?php foreach($data['images'] as $image) { ?>
+          <div class="photo-intext-container">
+            <img class="history-photo-slider" src="<?= '/' . IMAGES_GALERIA . $image ?>">
+          </div>
+        <?php } ?>
       <?php } ?>
     </div>
     <div class="row">
-      <?php foreach($data['images_content'] as $image) { ?>
-        <div class="col-md-4">
-          <img class="photo-content" src="<?= '/' . IMAGES_GALERIA_CONTENT . $image ?>">
-        </div>
+      <?php if(isset($data['images'])) { ?>
+        <?php foreach($data['images'] as $image) { ?>
+          <div class="col-md-4">
+            <img class="photo-content" src="<?= '/' . IMAGES_GALERIA . $image ?>">
+          </div>
+        <?php } ?>
       <?php } ?>
     </div>
   </div>

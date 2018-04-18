@@ -68,7 +68,9 @@
     <div class="partnersWrapper">
       <h3 class="mainTitle"><?= $trans['our-partners'] ?></h3>
       <div class="partnersPhoto">
-        <img src="/public/src/img/kontakt/rotary-club.png">
+        <div class="partnersRotaryClub">
+          <a target="_blank" href="http://rc-warszawajozefow.pl/"><img src="/public/src/img/kontakt/rotary-club.png"></a> 
+        </div>
       </div>
     </div>
   </div>

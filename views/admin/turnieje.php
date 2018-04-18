@@ -83,14 +83,14 @@
           <input type="submit" value="Save">
       </form>
 
-    <div class="archiwum">
+    <!--<div class="archiwum">
       <a href="../../tuturniejeCalendars/calendar2016.pdf" class="downloadButton" download>
         <button>Turnieje 2017.pdf</button>
       </a>
       <a href="../../tuturniejeCalendars/calendar2017.pdf" class="downloadButton" download>
         <button>Turnieje 2016.pdf</button>
       </a>
-    </div>
+    </div>-->
 
     <div class="turniejeInfoText">
       Zapisy przyjmujemy pod mailem <b>turnieje@groundgolf.pl</b> , ew. numerem telefonu <b>603 563 399</b>.

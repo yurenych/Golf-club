@@ -30,14 +30,14 @@
 }
 .buttonPrev {
 	position: absolute;
-	top: 17%;
-	left: 3%;
+	top: 280px;
+	left: 50px;
 	z-index: 2; 
 }
 .buttonNext {
 	position: absolute;
-	top: 17%;
-	right: 3%;
+	top: 280px;
+	right: 50px;
 	z-index: 2; 
 }
 .buttonPrev:hover, .buttonNext:hover {

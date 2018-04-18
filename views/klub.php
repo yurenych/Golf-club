@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Golf-club</title>
+  <title>Ground Golf Club Warszawa</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 
   <link rel="stylesheet" type="text/css" href="/public/src/lib/bootstrap/css/bootstrap.min.css"/>
@@ -39,74 +39,71 @@
           </h2>
           <div class="row history-photo-block">
             <div class="col-md-12 histotyTitle"><?= $trans['club-text-1'] ?>
-              <br>Pierwszy oficjalny mecz na terenie Polski odbył się w
-              2017 roku
+              <br><?= $trans['club-text-2'] ?>
             </div>
             <div class="col-md-12 history-photo-block">
             <div class="slider">
               <div class="photo-intext-container">
-                <img class="history-photo-slider" src="/public/src/img/history/wisla1.jpg">
-                <div class="sliderText">Pierwszy oficjalny mecz w Polsce</div>
+                <img class="history-photo-slider" src="/public/src/img/club/wisla1.jpg">
+                <div class="sliderText"><?= $trans['club-text-3'] ?></div>
               </div>
               <div class="photo-intext-container">
-                <img class="history-photo-slider" src="/public/src/img/history/wisla2.jpg">
-                <div class="sliderText">Pierwszy oficjalny mecz w Polsce</div>
+                <img class="history-photo-slider" src="/public/src/img/club/wisla2.jpg">
+                <div class="sliderText"><?= $trans['club-text-3'] ?></div>
               </div>
               <div class="photo-intext-container">
-                <img class="history-photo-slider" src="/public/src/img/history/wisla3.jpg">
-                <div class="sliderText">Pierwszy oficjalny mecz w Polsce</div>
+                <img class="history-photo-slider" src="/public/src/img/club/wisla3.jpg">
+                <div class="sliderText"><?= $trans['club-text-3'] ?></div>
               </div>
               <div class="photo-intext-container">
-                <img class="history-photo-slider" src="/public/src/img/history/wisla4.jpg">
-                <div class="sliderText">Pierwszy oficjalny mecz w Polsce</div>
+                <img class="history-photo-slider" src="/public/src/img/club/wisla4.jpg">
+                <div class="sliderText"><?= $trans['club-text-3'] ?></div>
               </div>
             </div>
           </div> 
           <div class="col-md-12 histotyTitle">
-            <br>
-              Aktywność fizyczna na łonie natury jest bezcennym źródłem zdrowia i dobrego samopoczucia. Połączenie sportu z rekreacją, nie tylko pomaga zrzucić kilogramy, ale obniża także ryzyko chorób serca, naczyń krwionośnych i pobudza energię, dzięki czemu m.in. zmniejsza problemy mentalne, w tym stopień depresji. W 2017 roku, po kilku latach ćwiczeń oraz gry z przyjaciółmi i znajomymi, założyliśmy wspólnie Stowarzyszenie Klub Sportowy "AGI".W międzyczasie, reprezentanci naszego klubu uczestniczyli już dwukrotnie w światowych corocznych Mistrzostwach Ground Golfa w Japonii.
+            <br><?= $trans['club-text-4'] ?>
           </div>
           <div class="col-md-12 history-photo-block">
             <div class="slider">
               <div class="photo-intext-container">
-                <img class="history-photo-slider" src="/public/src/img/galeria/content/japan2016(1).jpg">
-                <div class="sliderText">Nasza drużyna na mistrzowstwach w Japonii 2016</div>
+                <img class="history-photo-slider" src="/public/src/img/club/japan2016(1).jpg">
+                <div class="sliderText"><?= $trans['club-text-5'] ?></div>
               </div>
               <div class="photo-intext-container">
-                <img class="history-photo-slider" src="/public/src/img/galeria/content/japan2016(2).jpg">
-                <div class="sliderText">Uroczyste otwarcie mistrzoswstw w Japonii 2016</div>
+                <img class="history-photo-slider" src="/public/src/img/club/japan2016(2).jpg">
+                <div class="sliderText"><?= $trans['club-text-5'] ?></div>
               </div>
               <div class="photo-intext-container">
-                <img class="history-photo-slider" src="/public/src/img/galeria/content/japan2016(3).jpg">
-                <div class="sliderText">Nasza drużyna na mistrzowstwach w Japonii 2016</div>
+                <img class="history-photo-slider" src="/public/src/img/club/japan2016(3).jpg">
+                <div class="sliderText"><?= $trans['club-text-5'] ?></div>
               </div>
               <div class="photo-intext-container">
-                <img class="history-photo-slider" src="/public/src/img/galeria/content/japan2016(4).jpg">
-                <div class="sliderText">Nasza drużyna na mistrzowstwach w Japonii 2016</div>
+                <img class="history-photo-slider" src="/public/src/img/club/japan2016(4).jpg">
+                <div class="sliderText"><?= $trans['club-text-5'] ?></div>
               </div>
             </div>
           </div> 
           <div class="col-md-12 histotyTitle"> 
-            <br>Wiosną i latem 2017 roku odbywały się już regularnie mecze Ground Golfa w Konstancinie-Jeziornej,
-            w Wyszkowie i innych miejscach. W dniu 20 września 2017 roku Klub Sportowy AGI został zarejestrowany przez Sąd Rejonowy dla m.st. Warszawy w Warszawie, XIII Wydział Gospodarczy Krajowego Rejestru Sądowego.
+            <br><?= $trans['club-text-6'] ?>
           </div>
             <div class="col-md-12 history-photo-block">
             <div class="slider">
               <div class="photo-intext-container">
-                <img class="history-photo-slider" src="/public/src/img/galeria/content/japan2017(1).jpg">
-                <div class="sliderText">Nasza drużyna na mistrzowstwachw Japonii 2017</div>
+                <img class="history-photo-slider" src="/public/src/img/club/japan2017(1).jpg">
+                <div class="sliderText"><?= $trans['club-text-7'] ?></div>
               </div>
               <div class="photo-intext-container">
-                <img class="history-photo-slider" src="/public/src/img/galeria/content/japan2017(2).jpg">
-                <div class="sliderText">Nasza drużyna na mistrzowstwach w Japonii 2017</div>
+                <img class="history-photo-slider" src="/public/src/img/club/japan2017(2).jpg">
+                <div class="sliderText"><?= $trans['club-text-7'] ?></div>
               </div>
               <div class="photo-intext-container">
-                <img class="history-photo-slider" src="/public/src/img/galeria/content/japan2017(10).jpg">
-                <div class="sliderText">Uroczyste otwarcie mistrzoswstw w Japonii 2017</div>
+                <img class="history-photo-slider" src="/public/src/img/club/japan2017(9).jpg">
+                <div class="sliderText"><?= $trans['club-text-7'] ?></div>
               </div>
               <div class="photo-intext-container">
-                <img class="history-photo-slider" src="/public/src/img/galeria/content/japan2017(3).jpg">
-                <div class="sliderText">Inni uczęstnicy Pucharu w Japonii 2017</div>
+                <img class="history-photo-slider" src="/public/src/img/club/japan2017(3).jpg">
+                <div class="sliderText"><?= $trans['club-text-7'] ?></div>
               </div>
             </div>
           </div>
@@ -115,31 +112,31 @@
       <li class="club-info-cele">
         <div class="cele">
           <h2 class="headline"><?= $trans['club-title-2'] ?></h2>
-          Klub nasz, poza wspólnymi treningami, organizuje cykl turniejów oraz prezentacje i szkolenia popularyzujące Ground Golfa. Staramy się w miarę możliwości popularyzować ten sport oraz współpracujemy z innymi europejskimi klubami, aby zorganizować turnieje europejskie. Aktualnie przygotowujemy się do organizacji w przyszłym roku w Polsce Mistrzostw Europy oraz do uczestnictwa w World Master Games Japan 2021.
+          <?= $trans['club-text-8'] ?>
           <div class="KlubPhoto">
-            <img class="naszKlubPhoto" src="/public/src/img/history/klub1.jpg">
+            <img class="naszKlubPhoto" src="/public/src/img/club/klub1.jpg">
           </div>
         </div>
       </li>
       <li class="club-info-cele">
         <div class="cele">
           <h2 class="headline"><?= $trans['club-title-3'] ?></h2>
-            <br>1. Rozwijanie róznych form kultury fizycznej;
-            <br>2. Wspieranie rozwoju kultury fizycznej a zwłaszcza propagowanie sportu Ground Golf;
-            <br>3. Integrowanie miedzypokoleniowe celem aktywizowania wszystkich grup wiekowych;
-            <br>4. Integrowanie wszelkich srodowisk a w szczególnosci: uczniowskich, rodzicielskich i nauczycielskich na terenie swego działania;
-            <br>5. Prowadzenie aktywnosci w sferze kultury fizycznej, w dziedzinie rekreacji i rehabilitacji ruchowej;
-            <br>6. Podejmowanie działan na rzecz zrozumienia i poszanowania roznych wrazliwosci kulturowych i cywilizacyjnych poprzez sport;
-            <br>7. Podejmowanie działan dla zapewnienia rozwoju psychofizycznego, wychowania, doskonalenia uzdolnien, umiejetnosci i sprawnosci, zachowania zdrowia człowieka,w tym w szczególnosci u dzieci i młodziezy, a takze krzewienie wiedzy i utrwalania zwyczajów w tym zakresie;
-            <br>8. Planowanie i organizowanie zycia sportowego członków klubu w oparciu o możliwosci obiektowe i sprzetowe;
-            <br>9. Uczestniczenie w imprezach sportowych organizowanych na terenie polski jak i międzynarodowych;
-            <br>10. Organizowanie zajec sportowych w celu wszechstronnego rozwoju sprawnosci fizycznej i umysłowej, a takze w celu zapobiegania patologiom społecznym;
-            <br>11. Organizowanie róznorodnych form współzawodnictwa sportowego;
-            <br>12. Realizacja zadań z zakresu krajoznawstwa oraz wypoczynku dzieci i młodziezy, a także promowanie ekologii i podejmowanie działan o znaczeniu ekologicznym, jako sport służący ochronie srodowiska;
-            <br>13. Realizacja zadan z zakresu profilaktyki uzaleznien poprzez sport;
-            <br>14. Współudział w rozbudowie i utrzymaniu urzadzen i sprzetu sportowego;
-            <br>15. Szkolenie trenerów ground golfa, przygotowywanie całego zaplecza tej dyscypliny sportowej;
-            <br>16. Organizowanie zawodów sportowych, happeningów, imprez o znaczeniu regionalnym, krajowym i miedzynarodowym;
+            <br>1. <?= $trans['club-goals-1']?>	
+            <br>2. <?= $trans['club-goals-2']?>
+            <br>3. <?= $trans['club-goals-3']?>
+            <br>4. <?= $trans['club-goals-4']?>
+            <br>5. <?= $trans['club-goals-5']?>
+            <br>6. <?= $trans['club-goals-6']?>
+            <br>7. <?= $trans['club-goals-7']?>
+            <br>8. <?= $trans['club-goals-8']?>
+            <br>9. <?= $trans['club-goals-9']?>
+            <br>10. <?= $trans['club-goals-10']?>
+            <br>11. <?= $trans['club-goals-11']?>
+            <br>12. <?= $trans['club-goals-12']?>
+            <br>13. <?= $trans['club-goals-13']?>
+            <br>14. <?= $trans['club-goals-14']?>
+            <br>15. <?= $trans['club-goals-15']?>
+            <br>16. <?= $trans['club-goals-16']?>
         </div>
       </li>
       <li class="">
@@ -148,9 +145,9 @@
             <div class="zarzad">
               <h2 class="headline"><?= $trans['club-title-4'] ?>
               </h2>
-              <br><b>Prezes:</b> Och Bataa
-              <br><b>Sekretarz:</b> Edwin Zbigniew Truksa
-              <br><b>Skarbnik:</b> Altankhuyag Erdenekhuyag
+              <br><b><?= $trans['club-government-1']?></b> Och Bataa
+              <br><b><?= $trans['club-government-2']?></b> Edwin Zbigniew Truksa
+              <br><b><?= $trans['club-government-3']?></b> Altankhuyag Erdenekhuyag
             </div> 
           </li>
           <li class="club-info-komisje col-md-6">

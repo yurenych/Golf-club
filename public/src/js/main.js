@@ -16,7 +16,7 @@ $(document).ready(function(){
         	slidesToShow: 1,
         	speed: 300
       	}
-      }	
+      }
   	]
 	});
 });
@@ -73,6 +73,9 @@ $(document).ready( function () {
     $('body').addClass('stop-scrolling');
   });
   $(".dark-body, .closeButton").click(function(e){
+    $('iframe').each(function(){
+      $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+    });
     $(".dark-body").css("display","none");
     $(".viewVideoContainer").removeClass('visible');
     $('body').removeClass('stop-scrolling');

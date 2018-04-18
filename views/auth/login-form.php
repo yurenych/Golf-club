@@ -31,7 +31,7 @@
     <?php include 'views/inc/navigation.php' ?>
     <!-- end inc navigation menu -->
 
-    <form action="/login" method="POST">
+    <form class="loginForm" action="/login" method="POST">
         <input type="hidden" name="_token" value="<?= CSRF_TOKEN ?: '' ?>">
         <input type="text" name="login" placeholder="Login" required>
         <input type="password" name="password" placeholder="Password" required>

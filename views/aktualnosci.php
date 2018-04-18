@@ -31,13 +31,11 @@
   <div class="row mainContainer">
     <div class="col-md-2 photoWrapper">
       <h3 class = "sideBarTitlePhoto"><?= $trans['our-photos'] ?></h3>
-      <div class="sidePhoto">
-        <img src="/public/src/img/aktualnosci/mongoliatravel2.jpg">
-        <div class="photoDescription"><?= $trans['opis-photo1'] ?></div>
-      </div>
-      <div class="button-more">
-      	<a href="<?= isset($_SESSION['_token']) ? "/{$lang_id}/admin/galeria"     : "/{$lang_id}/galeria" ?>">Więcej...</a>
-      </div>
+        <?php foreach ($data['aktualnosci_photo'] as $aktualnosci_photo) { ?>
+            <img src="/public/src/img/aktualnosci/photo/<?= $aktualnosci_photo['obraz'] ?>" class="previewPhoto">
+            <div class="photoDescription"><?= $aktualnosci_photo['opis'] ?></div>
+        <?php } ?>
+        <a href="http://groundgolf.pl/galeria"><?= $trans['more'] ?></a>
     </div>
     <div class="wrapper col-md-8">
       <div class="headline"><?= $trans['news'] ?></div>
@@ -46,14 +44,14 @@
           <?php foreach ($data['aktualnosci_post'] as $aktualnosci_post) { ?>
               <div class="news-photo-container row">
                   <h3 class="newsTitle col-md-12">
-                     <?= $aktualnosci_post['temat'] ?>
+                      <?= $aktualnosci_post['temat'] ?>
                   </h3>
                   <div class="photo-news col-md-4">
                       <img src="/public/src/img/aktualnosci/<?= $aktualnosci_post['obraz'] ?>">
                   </div>
                   <div class="news-text col-md-8">
                       <div>
-                         <?= $aktualnosci_post['opis'] ?>
+                          <?= $aktualnosci_post['opis'] ?>
                       </div>
                   </div>
               </div>
@@ -64,29 +62,13 @@
     <h3 class = "sideBarTitleVideo"><?= $trans['our-films'] ?></h3>
       <?php if(count($data['aktualnosci_video']) > $i++) { ?>
         <?php foreach ($data['aktualnosci_video'] as $aktualnosci_video) { ?>
-          <div class="videoContainer ">
-              <img src="<?= $aktualnosci_video['obraz'] ?>" class="previewVideo">
+          <div class="videoContainer">
+              <img src="https://i.ytimg.com/vi_webp/<?= $aktualnosci_video['wideo'] ?>/hqdefault.webp" class="previewVideo">
               <div class="videoDescription"><?= $aktualnosci_video['opis'] ?></div>
           </div>
           <div class="viewVideoContainer">
               <img src="/public/src/img/closeButton.png" class="closeButton">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/<?= $aktualnosci_video['wideo'] ?>" allowscriptaccess="always" frameborder="0" allow="autoplay; encrypted-media" class="video" allowfullscreen></iframe>
-          </div>
-          <div class="videoContainer ">
-              <img src="<?= $aktualnosci_video['obraz'] ?>" class="previewVideo">
-              <div class="videoDescription"><?= $aktualnosci_video['opis'] ?></div>
-          </div>
-          <div class="viewVideoContainer">
-              <img src="/public/src/img/closeButton.png" class="closeButton">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/<?= $aktualnosci_video['wideo'] ?>" allowscriptaccess="always" frameborder="0" allow="autoplay; encrypted-media" class="video" allowfullscreen></iframe>
-          </div>
-          <div class="videoContainer ">
-              <img src="<?= $aktualnosci_video['obraz'] ?>" class="previewVideo">
-              <div class="videoDescription"><?= $aktualnosci_video['opis'] ?></div>
-          </div>
-          <div class="viewVideoContainer">
-              <img src="/public/src/img/closeButton.png" class="closeButton">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/<?= $aktualnosci_video['wideo'] ?>" allowscriptaccess="always" frameborder="0" allow="autoplay; encrypted-media" class="video" allowfullscreen></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/<?= $aktualnosci_video['wideo'] ?>?enablejsapi=1" allowscriptaccess="always" frameborder="0" allow="autoplay; encrypted-media" class="video" allowfullscreen></iframe>
           </div>
         <?php } ?>
       <?php } ?>

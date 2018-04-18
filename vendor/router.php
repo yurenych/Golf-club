@@ -26,7 +26,7 @@ Class Route
             case ['GET', 'admin']:
                 switch([$request_method, next($url)]) {
                     case ['GET', 'galeria']:
-                        $to_view = self::controllers('IndexController')->galeria();
+                        $to_view = self::controllers('AdminController')->galeria();
                         return self::views(key($to_view), array_shift($to_view));
                     
                     case ['GET', 'gg-zdrowie']:
@@ -111,6 +111,13 @@ Class Route
                         }
                         break;
 
+                    case ['POST', 'galeria']:
+                        switch([$request_method, next($url)]) {
+                            case ['POST', 'save']:
+                                return self::controllers('AdminController')->galeriaSave($_POST, $_FILES);
+                        }
+                        break;
+
                     case ['POST', 'aktualnosci']:
                         switch([$request_method, next($url)]) {
                             case ['POST', 'actions']:
@@ -119,6 +126,13 @@ Class Route
 
                             case ['POST', 'save']:
                                 $to_view = self::controllers('AdminController')->aktualnosciSave($_POST, $_FILES);
+                                return self::views(key($to_view), array_shift($to_view));
+
+                            case ['POST', 'save_photo']:
+                                return self::controllers('AdminController')->aktualnosciSavePhoto($_POST, $_FILES);
+
+                            case ['POST', 'save_wideo']:
+                                $to_view = self::controllers('AdminController')->aktualnosciSaveWideo($_POST);
                                 return self::views(key($to_view), array_shift($to_view));
 
                             default:

@@ -58,8 +58,11 @@
 .infoContainer .headline{
 	margin: 10px 0 10px 0; 
 }
-.partnersPhoto > img{
-	width: 300px;
+.partnersRotaryClub{
+	padding-bottom: 20px;
+}
+.partnersRotaryClub a img{
+	width: 150px;
 	height: 200px;
 }
 

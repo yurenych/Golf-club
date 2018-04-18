@@ -10,20 +10,14 @@ class IndexController extends Route
     public function galeria()
     {
         // Open dir and scan files.
-        $images_slider_for = scandir(IMAGES_GALERIA_SLIDER_FOR);
-        $images_slider_nav = scandir(IMAGES_GALERIA_SLIDER_NAV);
-        $images_content = scandir(IMAGES_GALERIA_CONTENT);
+        $images = scandir(IMAGES_GALERIA);
 
         // Remove . and .. from dir.
-        unset($images_slider_for[array_search('.', $images_slider_for)], $images_slider_for[array_search('..', $images_slider_for)]);
-        unset($images_slider_nav[array_search('.', $images_slider_nav)], $images_slider_nav[array_search('..', $images_slider_nav)]);
-        unset($images_content[array_search('.', $images_content)], $images_content[array_search('..', $images_content)]);
+        unset($images[array_search('.', $images)], $images[array_search('..', $images)]);
 
         return [
             'galeria' => [
-                'images_slider_for' => $images_slider_for,
-                'images_slider_nav' => $images_slider_nav,
-                'images_content'    => $images_content
+                'images' => $images,
             ]
         ];
     }

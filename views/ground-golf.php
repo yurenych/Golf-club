@@ -37,68 +37,55 @@
             <img class="go-photo" src="/public/src/img/ground-golf/gg1.jpg">
           </div>
           <div class="col-md-8 groundGolfText">
-            <h3>Czym jest Ground Golf?
+            <h3><?= $trans['ground-golf-title-1']?>
             </h3>
-            Ground Golf pochodzi Japonii, z prefektury Tottori.
-            W Polsce zaczęło grać od 2015 roku. „Jest tak
-            łatwy, że każdy może grać, tam gdzie chce!” Nie
-            musisz być szczególnie uzdolniony, żeby grać w
-            Ground Golf. Musisz tylko wiedzieć, kiedy się
-            skupić, kiedy użyć siły i jak dostosować swój
-            zamach. Zasady są równie proste.
-            <h3>Nawet nowicjusze mogą natychmiast grać!
+            <?= $trans['ground-golf-text-1']?>
+            <h3><?= $trans['ground-golf-title-2']?>
             </h3>
-            W Ground Golfa mogą grać ludzie w każdym
-            wieku, nie tylko starsi. Gra ta ma swoich
-            zwolenników przede wszystkim w Japonii, ale
-            sukcesywnie rozprzestrzenia się również w innych
-            krajach.
-            <h3>Skąd pochodzi nazwa Ground Golf?
+            <?= $trans['ground-golf-text-2']?>
+            <h3><?= $trans['ground-golf-title-3']?>
             </h3>
-            Gra przyjęłą nazwę "Ground Golf", ponieważ może
-            być rozgrywana na szkolnych boiskach (w Japonii
-            nazywanych "grounds").
+            <?= $trans['ground-golf-text-3']?>
           </div>
         </div>
       </li>
       <li class="col-md-12 ground-golf-zasady container-fluid">
         <div class="articleTitle">
-          <h2 class="headline">Cechy Ground Golfa</h2>
+          <h2 class="headline"><?= $trans['ground-golf-title-4']?></h2>
           <div class="taskContainer">
             <div class="roundNumber">1.</div>
-            <div class="taskTitle">Można grać gdziekolwiek</div>
-            <div class="containerInfo">Tory nie muszą spełniać konkretnych norm. Tor może być urządzony gdziekolwiek - na terenach sportowych, brzegach rzek, parkach, ogrodach itp. - zgodnie z celami grającego, dostępnym otoczeniem, poziomem umiejętności itp.</div>
+            <div class="taskTitle"><?= $trans['ground-golf-text-4']?></div>
+            <div class="containerInfo"><?= $trans['ground-golf-text-5']?></div>
           </div>
           <div class="taskContainer">
             <div class="roundNumber">2.</div>
-            <div class="taskTitle">Przygotowanie jest łatwe</div>
-            <div class="containerInfo">Nie trzeba kopać dołków jak w normalnym golfie. Tor przygotowuje się rozstawiając pionowe chorągiewki.</div>
+            <div class="taskTitle"><?= $trans['ground-golf-text-6']?></div>
+            <div class="containerInfo"><?= $trans['ground-golf-text-7']?></div>
           </div>
           <div class="taskContainer">
             <div class="roundNumber">3.</div>
-            <div class="taskTitle">Zasady są proste</div>
-            <div class="containerInfo">W porównaniu do innych gier, zasady są naprawdę proste i po pierwszej partii każdy je zapamięta.</div>
+            <div class="taskTitle"><?= $trans['ground-golf-text-8']?></div>
+            <div class="containerInfo"><?= $trans['ground-golf-text-9']?></div>
           </div>
           <div class="taskContainer">
             <div class="roundNumber">4.</div>
-            <div class="taskTitle">Może grać nieograniczona liczba graczy</div>
-            <div class="containerInfo">W Ground Golfa można grać samemu lub jeśli jest dość miejsca, mogą grać setki osób jednocześnie. Piłka nigdy nie leci w powietrzu więc jeśli chorągiewki są starannie ustawione, można rozpoczynać grę jednocześnie od każdej chorągiewki z osobna. 
-            </div>
+            <div class="taskTitle"><?= $trans['ground-golf-text-10']?></div>
+            <div class="containerInfo"><?= $trans['ground-golf-text-11']?></div>
           </div>
           <div class="taskContainer">
             <div class="roundNumber">5.</div>
-            <div class="taskTitle">Ty jesteś sędzią</div>
-            <div class="containerInfo">Gracze wydają samodzielnie werdykty w czasie gry. Jeśli nie możesz zdecydować o czymś samodzielnie, poproś o poradę innych graczy, którzy grają z tobą.</div>
+            <div class="taskTitle"><?= $trans['ground-golf-text-12']?></div>
+            <div class="containerInfo"><?= $trans['ground-golf-text-13']?></div>
           </div>
           <div class="taskContainer">
             <div class="roundNumber">6.</div>
-            <div class="taskTitle">Nie musisz być najlepszy,żeby się dobrze bawić</div>
-            <div class="containerInfo">Jak we wszystkich konkurencjach sportowych, im więcej grasz w Ground Golfa, tym lepiej to robisz. Ground Golf jest grą w czasie której możesz się dobrze bawić, nie będąc mistrzem gry. To jest gra, która zapewnia radość ludziom w różnym wieku od wnuków do dziadków. Ma wszystko, czego potzeba aby być radosną, rodzinną rozrywką.</div>
+            <div class="taskTitle"><?= $trans['ground-golf-text-14']?></div>
+            <div class="containerInfo"><?= $trans['ground-golf-text-15']?></div>
           </div>
           <div class="taskContainer">
             <div class="roundNumber">7.</div>
-            <div class="taskTitle">Nie ma ograniczenia czasowego</div>
-            <div class="containerInfo">Ponieważ w Ground Golfie nie korzystamy z zegara, możesz grać w swoim tempie - masz tyle czasu ile potrzebujesz niezależnie od umiejętności, liczby graczy lub charakterystyki pola.</div>
+            <div class="taskTitle"><?= $trans['ground-golf-text-16']?></div>
+            <div class="containerInfo"><?= $trans['ground-golf-text-17']?></div>
           </div>
          <!--  <div><b>Zasada 1</b> Po oddaniu strzału gracze powinni szybko się odsunąć, aby nie przeszkadzać kolejnym graczom.
           <br><b>Zasada 2</b> Kiedy jest kolej na oddanie strzału przez kolejnego gracza, pozostali gracze nie powinni rozmawiać ani stać blisko niego, jego piłki lub bramki. Grupy nie powinny rozpoczynać rozgrywki do konkretnej bramki dopóki inna grupa przed nimi nie zakończy swojej rozgrywki do tej bramki.
@@ -120,12 +107,12 @@
       </li>
       <li class="ground-golf-pole container-fluid">
         <div class="row articleTitle">
-          <h3 class="headline">Standardowy tor do gry w ground golfa
+          <h3 class="headline"><?= $trans['ground-golf-title-5']?>
           </h3>
           <div class="golfMap-photo col-md-7"><img class="pole-photo" src="/public/src/img/ground-golf/pole.jpg">
           </div>
-          <div class="golfMap-text col-md-5"><b>Podstawowe zasady:</b> Ground Golf posiada swoje własne kije, piłki, chorągiewki i maty startowe (tee-off). Gra się podobnie jak w golfa: uderzasz piłkę kijem tyle razy, żeby dotrzeć do chorągiewki.
-          <br><br><b>Tor:</b> Standardowy tor posiada 8 dołków, po dwa dołkie oddalone od siebie odpowiednio o 50m, 30m, 25m i 15m. 
+          <div class="golfMap-text col-md-5"><b><?= $trans['ground-golf-text-18']?></b><?= $trans['ground-golf-text-19']?> 
+          <br><br><b><?= $trans['ground-golf-text-20']?></b> <?= $trans['ground-golf-text-21']?>
           </div>
         </div>
       </li>

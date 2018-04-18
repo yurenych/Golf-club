@@ -54,7 +54,15 @@ nav {
 	margin: 0 auto;
 	padding-top: 15px;
 }
-
+.logout{
+	top: 10px;
+    	left: 20px;
+    	position: absolute;
+	font-weight: bold;
+}
+.loginForm{
+	padding: 30px 0 30px 590px;
+}
 
 /*FOOTER*/
 

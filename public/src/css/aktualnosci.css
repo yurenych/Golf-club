@@ -69,6 +69,10 @@
 	width: 100%;
 	height: 230px;
 }
+.previewPhoto {
+	width: 100%;
+	height: 190px;
+}
 .viewVideoContainer {
 	position: fixed;
 	top: 40%;
@@ -103,12 +107,14 @@
 }
 .videoContainer{
 	border-bottom: 2px solid #009900;
+	margin-bottom: 10px;
 }
-.videoDescription{
-	margin-top: -10px;
+.videoContainer:hover{
+	cursor: pointer;
 }
 .photoDescription{
-	margin-top: 15px;
+	margin: 10px 0;
+	border-bottom: 2px solid #009900;
 }
 .sideBarTitleVideo{
 	text-align: center;
