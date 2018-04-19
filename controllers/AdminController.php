@@ -1,5 +1,22 @@
 <?php
 
+function compress_image($source, $destination, $quality=50) {
+    $info = getimagesize($source);
+
+    if ($info['mime'] == 'image/jpeg')
+        $image = imagecreatefromjpeg($source);
+
+    elseif ($info['mime'] == 'image/gif')
+        $image = imagecreatefromgif($source);
+
+    elseif ($info['mime'] == 'image/png')
+        $image = imagecreatefrompng($source);
+
+    imagejpeg($image, $destination, $quality);
+
+    return $destination;
+}
+
 class AdminController extends Route
 {
     public $redirect_to_admin = 'admin'; // Where redirecting user if here login.
@@ -92,6 +109,7 @@ class AdminController extends Route
                     $image_name =  base_convert(uniqid(), 16, 36) . '.' . pathinfo($files['obraz']['name'][$key], PATHINFO_EXTENSION);
                     $target = UPLOAD_IMAGES . 'galeria/' . $image_name;
 
+                    compress_image($tmp_name, $tmp_name);
                     // Uploaded images.
                     move_uploaded_file($tmp_name, $target);
                 }
@@ -251,7 +269,10 @@ class AdminController extends Route
                     $target = UPLOAD_IMAGES . 'aktualnosci/post/' . $image_name;
 
                     // Uploaded images.
-                    move_uploaded_file($files['aktualnosci']['tmp_name'][$id]['obraz'], $target);
+                    $tmp_url = $files['aktualnosci']['tmp_name'][$id]['obraz'];
+
+                    compress_image($tmp_url, $tmp_url);
+                    move_uploaded_file($tmp_url, $target);
                 } else {
                     $image_name = $active_images[$id]['obraz'];
                 }
@@ -322,6 +343,9 @@ class AdminController extends Route
                                 // Get the extension of the file and build path for save him.
                                 $image_name =  base_convert(uniqid(), 16, 36) . '.' . $images['extension'];
                                 $target = UPLOAD_IMAGES . 'aktualnosci/photo/' . $image_name;
+
+                                $tmp_url = $files['aktualnosci']['tmp_name'][$id]['obraz'];
+                                compress_image($tmp_url, $tmp_url);
 
                                 // Uploaded images.
                                 move_uploaded_file($files['aktualnosci']['tmp_name'][$id]['obraz'], $target);
