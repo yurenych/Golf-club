@@ -47,7 +47,7 @@
                       <?= $aktualnosci_post['temat'] ?>
                   </h3>
                   <div class="photo-news col-md-4">
-                      <img src="/public/src/img/aktualnosci/<?= $aktualnosci_post['obraz'] ?>">
+                      <img src="/public/src/img/aktualnosci/post/<?= $aktualnosci_post['obraz'] ?>">
                   </div>
                   <div class="news-text col-md-8">
                       <div>
