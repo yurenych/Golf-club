@@ -17,16 +17,16 @@ define('CSRF_TOKEN', '601d4e8b5fd64071b944e774a0dfe26a');
 define('YEAR', date('Y'));
 
 // Const from connect to DB hosting.
-//define('DB_LOCALHOST', 'localhost');
-//define('DB_DATABASE', 'serwer21700_Baza');
-//define('DB_USERNAME', 'serwer21700');
-//define('DB_PASSWORD', 'chimgee2014');
+define('DB_LOCALHOST', 'localhost');
+define('DB_DATABASE', 'serwer21700_Baza');
+define('DB_USERNAME', 'serwer21700');
+define('DB_PASSWORD', 'chimgee2014');
 
 // Const from connect to DB local.
-define('DB_LOCALHOST', 'localhost');
-define('DB_DATABASE', 'golf_club');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
+//define('DB_LOCALHOST', 'localhost');
+//define('DB_DATABASE', 'golf_club');
+//define('DB_USERNAME', 'root');
+//define('DB_PASSWORD', '');
 
 // Set admin validation data.
 define('USER_LOGIN', 'admin');
