@@ -61,12 +61,12 @@
     <div class="col-md-2 videoWrapper">
     <h3 class = "sideBarTitleVideo"><?= $trans['our-films'] ?></h3>
       <?php if(count($data['aktualnosci_video']) > $i++) { ?>
-        <?php foreach ($data['aktualnosci_video'] as $aktualnosci_video) { ?>
-          <div class="videoContainer">
+        <?php foreach ($data['aktualnosci_video'] as $key => $aktualnosci_video) { ?>
+          <div class="videoContainer" data-video-key="<?= $key ?>">
               <img src="https://i.ytimg.com/vi_webp/<?= $aktualnosci_video['wideo'] ?>/hqdefault.webp" class="previewVideo">
               <div class="videoDescription"><?= $aktualnosci_video['opis'] ?></div>
           </div>
-          <div class="viewVideoContainer">
+          <div class="viewVideoContainer" data-video-key="<?= $key ?>">
               <img src="/public/src/img/closeButton.png" class="closeButton">
               <iframe width="560" height="315" src="https://www.youtube.com/embed/<?= $aktualnosci_video['wideo'] ?>?enablejsapi=1" allowscriptaccess="always" frameborder="0" allow="autoplay; encrypted-media" class="video" allowfullscreen></iframe>
           </div>

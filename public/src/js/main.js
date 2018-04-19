@@ -68,8 +68,10 @@ $(document).ready( function () {
 
 $(document).ready( function () {
   $(".videoContainer").click(function(e){
+    var videoKey = $(this).data("video-key");
+
     $(".dark-body").css("display","block");
-    $(".viewVideoContainer").addClass('visible');
+    $(".viewVideoContainer[data-video-key="+videoKey+"]").addClass('visible');
     $('body').addClass('stop-scrolling');
   });
   $(".dark-body, .closeButton").click(function(e){
