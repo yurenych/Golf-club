@@ -63,7 +63,7 @@
       <?php if(count($data['aktualnosci_video']) > $i++) { ?>
         <?php foreach ($data['aktualnosci_video'] as $key => $aktualnosci_video) { ?>
           <div class="videoContainer" data-video-id="<?= $aktualnosci_video['wideo'] ?>">
-              <img src="https://i.ytimg.com/vi_webp/<?= $aktualnosci_video['wideo'] ?>/hqdefault.webp" class="previewVideo">
+              <img src="https://img.youtube.com/vi/<?= $aktualnosci_video['wideo'] ?>/0.jpg" class="previewVideo">
               <div class="videoDescription"><?= $aktualnosci_video['opis'] ?></div>
           </div>
         <?php } ?>
