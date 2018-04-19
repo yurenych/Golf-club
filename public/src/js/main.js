@@ -68,17 +68,16 @@ $(document).ready( function () {
 
 $(document).ready( function () {
   $(".videoContainer").click(function(e){
-    var videoKey = $(this).data("video-key");
+
+    $('.viewVideoContainer iframe').attr("src", "https://www.youtube.com/embed/"+$(this).data('video-id')+"?enablejsapi=1");
 
     $(".dark-body").css("display","block");
-    $(".viewVideoContainer[data-video-key="+videoKey+"]").addClass('visible');
+    $(".viewVideoContainer").addClass('visible');
     $('body').addClass('stop-scrolling');
   });
   $(".dark-body, .closeButton").click(function(e){
-    $('iframe').each(function(){
-      $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
-    });
     $(".dark-body").css("display","none");
+    $('.viewVideoContainer iframe')[0].contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
     $(".viewVideoContainer").removeClass('visible');
     $('body').removeClass('stop-scrolling');
   });
