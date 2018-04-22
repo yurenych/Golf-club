@@ -44,7 +44,7 @@
           <?php foreach ($data['aktualnosci_post'] as $aktualnosci_post) { ?>
               <div class="news-photo-container row">
                   <h3 class="newsTitle col-md-12">
-                      <?= $aktualnosci_post['temat'] ?>
+                      <a href="/post?id=<?= $aktualnosci_post['id'] ?>"><?= $aktualnosci_post['temat'] ?></a>
                   </h3>
                   <div class="photo-news col-md-4">
                       <img src="/public/src/img/aktualnosci/post/<?= $aktualnosci_post['obraz'] ?>">

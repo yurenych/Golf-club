@@ -47,7 +47,6 @@ Class Route
                     case ['GET', 'turnieje']:
                         $to_view = self::controllers('AdminController')->middleWare()->turnieje();
                         return self::views(key($to_view), array_shift($to_view));
-
                     default:
                         $to_view = self::controllers('AdminController')->middleWare()->aktualnosci();
                         return self::views(key($to_view), array_shift($to_view));
@@ -87,6 +86,14 @@ Class Route
             case ['GET', 'turnieje']:
                 $to_view = self::controllers('IndexController')->turnieje();
                 return self::views(key($to_view), array_shift($to_view));
+
+            case ['GET', 'post']:
+                $to_view = self::controllers('IndexController')->aktualnosci();
+                if(isset($_GET['id']) && isset($to_view['aktualnosci']['aktualnosci_post'][(int)$_GET['id']])){
+                    return self::views('post', $to_view['aktualnosci']['aktualnosci_post'][(int)$_GET['id']]);
+                } else {
+                    return self::redirect('/');
+                }
 
             default:
                 $to_view = self::controllers('IndexController')->aktualnosci();
