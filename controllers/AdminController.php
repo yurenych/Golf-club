@@ -202,7 +202,7 @@ class AdminController extends Route
                 // Save data.
                 parent::models('DB')
                     ->table('turnieje')
-                    ->insert('sssssi', $value);
+                    ->insert('ssssssi', $value);
             }
         }
 
@@ -218,12 +218,13 @@ class AdminController extends Route
                 case 'add_row':
                     return parent::models('DB')
                         ->table('turnieje')
-                        ->insert('sssssi', [
+                        ->insert('ssssssi', [
                             'nr' => '',
                             'data' => '',
                             'czas' => '',
                             'nazva' => '',
                             'miejsce' => '',
+                            'wyniki' => '',
                             'czas_stworzenia' => time(),
                         ]);
 

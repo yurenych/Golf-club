@@ -28,7 +28,7 @@ Class Route
                     case ['GET', 'galeria']:
                         $to_view = self::controllers('AdminController')->galeria();
                         return self::views(key($to_view), array_shift($to_view));
-                    
+
                     case ['GET', 'gg-zdrowie']:
                         return self::views('gg-zdrowie');
 

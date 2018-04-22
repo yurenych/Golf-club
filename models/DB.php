@@ -153,6 +153,7 @@ class DB
 
         // Prepare SQL query.
         $insert = $this->mysqli->prepare("INSERT INTO {$this->table_name} ({$fields}) VALUES ({$replaced_fields})");
+
         call_user_func_array([$insert, 'bind_param'], $this->bindParamsForInsert(array_merge([$type], $array)));
 
         return $insert->execute() ? $insert->insert_id : false;

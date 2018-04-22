@@ -35,7 +35,7 @@
   <?php include 'views/inc/navigation.php' ?>
   <!-- end inc navigation menu -->
 
- <div class="wrapper"> 
+ <div class="wrapper">
   <h3 class="headline">
     Serdecznie zapraszamy do udziału w tegorocznych turniejach organizowanych przez AGI Ground Golf Klub!
   </h3>
@@ -50,6 +50,7 @@
                   <th>Czas</th>
                   <th>Nazwa</th>
                   <th>Miejsce</th>
+                  <th>Wyniki</th>
                   <th>Action</th>
               </tr>
               </thead>
@@ -70,6 +71,9 @@
                       </td>
                       <td>
                           <input type="text" name="turnieje[<?= $turnieje['id'] ?>][miejsce]" value="<?= $turnieje['miejsce'] ?>">
+                      </td>
+                      <td>
+                          <input type="text" name="turnieje[<?= $turnieje['id'] ?>][wyniki]" value="<?= $turnieje['wyniki'] ?>">
                       </td>
                       <td id="removeRow">x</td>
                   </tr>
