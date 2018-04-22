@@ -13,7 +13,7 @@
   <script type="text/javascript" src="/public/src/lib/fatNav/jquery.fatNav.min.js" ></script>
   <script type="text/javascript" charset="utf8" src="/public/src/lib/dataTables/datatables.min.js"></script>
   <script type="text/javascript" src="/public/src/js/main.js" defer></script>
-  
+
   <link rel="stylesheet" href="/public/src/css/styles.css"/>
   <link rel="stylesheet" href="/public/src/css/turnieje.css"/>
 
@@ -29,7 +29,7 @@
   <?php include 'views/inc/navigation.php' ?>
   <!-- end inc navigation menu -->
 
- <div class="wrapper"> 
+ <div class="wrapper">
   <h3 class="headline"><?= $trans['turnieje-title']?></h3>
   <div class="dataTableContainer">
 
@@ -41,6 +41,7 @@
               <th><?= $trans['turnieje-table-3']?></th>
               <th><?= $trans['turnieje-table-4']?></th>
               <th><?= $trans['turnieje-table-5']?></th>
+              <th><?= $trans['turnieje-table-6']?></th>
           </tr>
       </thead>
       <tbody>
@@ -51,6 +52,7 @@
                   <td><?= $turnieje['czas']?></td>
                   <td><?= $turnieje['nazva']?></td>
                   <td><?= $turnieje['miejsce']?></td>
+                  <td><?= $turnieje['wyniki']?></td>
               </tr>
           <?php } ?>
       </tbody>
