@@ -93,6 +93,9 @@ ul, li {
 .slick-next{
 	right: -12px;	
 }
+h1{
+	text-align:center;
+}
 @media screen and (max-width: 992px) {
   .history-photo {
     margin: 15px 0;

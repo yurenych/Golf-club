@@ -38,7 +38,8 @@
           <h2 class="headline"><?= $trans['club-title-1'] ?>
           </h2>
           <div class="row history-photo-block">
-            <div class="col-md-12 histotyTitle"><?= $trans['club-text-1'] ?>
+            <div class="col-md-12 histotyTitle"><?= $trans['club-text-1.1'] ?>
+              <br><br><?= $trans['club-text-1.2'] ?>
               <br><?= $trans['club-text-2'] ?>
             </div>
             <div class="col-md-12 history-photo-block">
@@ -138,6 +139,7 @@
             <br>15. <?= $trans['club-goals-15']?>
             <br>16. <?= $trans['club-goals-16']?>
         </div>
+        <h1><?= $trans['status-bodies']?></h1>
       </li>
       <li class="">
         <ul class="government row">
