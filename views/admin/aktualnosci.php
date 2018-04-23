@@ -76,7 +76,7 @@
                               </div>
                               <div class="news-text col-md-5">
                                   <div>
-                                      <textarea class='post-form' cols="55" rows="13" name="aktualnosci[<?= $aktualnosci_post['id'] ?>][opis]"><?= $aktualnosci_post['opis'] ?></textarea>
+                                      <textarea class='post-form' rows="13" name="aktualnosci[<?= $aktualnosci_post['id'] ?>][opis]"><?= $aktualnosci_post['opis'] ?></textarea>
                                   </div>
                               </div>
                           </div>
@@ -117,7 +117,8 @@
   <script type="text/javascript">
     $(function() {
       $('.post-form').each(function() {
-        $(this).froalaEditor()
+        $(this).froalaEditor({
+        })
       });
     });
   </script>

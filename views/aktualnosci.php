@@ -53,6 +53,7 @@
                       <div>
                           <?= $aktualnosci_post['opis'] ?>
                       </div>
+                      <a href="/post?id=<?= $aktualnosci_post['id'] ?>"><button><?= $trans['more'] ?></button></a>
                   </div>
               </div>
           <?php } ?>

@@ -1,3 +1,11 @@
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #009900;
+    border-radius: 8px;
+}
 
 .hamburger{
   display: none;
@@ -86,9 +94,9 @@ footer{
 .facebook, .contactus {
   position: relative;
   margin-top: 10px;
-  display: inline-block; 
+  display: inline-block;
   width: 10%;
-} 
+}
 .footerButton:hover, .facebook:hover, .contactus:hover {
   color: #ffffff;
   cursor: pointer;
@@ -96,7 +104,7 @@ footer{
 }
 .footerButton {
   width: 10%;
-  display: inline-block; 
+  display: inline-block;
 }
 .copyright {
   margin: 5px;
@@ -141,11 +149,11 @@ footer{
     width: 100%;
   }
   .language{
-    margin-left:15px;	
-    
+    margin-left:15px;
+
   }
   .changeLanguage{
-    padding-right:15px;		
+    padding-right:15px;
   }
   .fbLogo, .mailLogo{
     left: 39%;
