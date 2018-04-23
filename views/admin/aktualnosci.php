@@ -13,9 +13,13 @@
   <script type="text/javascript" src="/public/src/js/main.js"></script>
 
   <script type="text/javascript" src="/public/src/js/admin/aktualnosci.js" defer></script>
+  <script type="text/javascript" src="/public/src/js/vendor/froala_editor.js" defer></script>
 
   <link rel="stylesheet" href="/public/src/css/styles.css"/>
   <link rel="stylesheet" href="/public/src/css/aktualnosci.css"/>
+  <link rel="stylesheet" href="/public/src/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="/public/src/css/froala_editor.min.css"/>
+  <link rel="stylesheet" href="/public/src/css/froala_style.min.css"/>
 </head>
 
 <body>
@@ -72,7 +76,7 @@
                               </div>
                               <div class="news-text col-md-5">
                                   <div>
-                                      <textarea cols="55" rows="13" name="aktualnosci[<?= $aktualnosci_post['id'] ?>][opis]"><?= $aktualnosci_post['opis'] ?></textarea>
+                                      <textarea class='post-form' cols="55" rows="13" name="aktualnosci[<?= $aktualnosci_post['id'] ?>][opis]"><?= $aktualnosci_post['opis'] ?></textarea>
                                   </div>
                               </div>
                           </div>
@@ -110,7 +114,13 @@
           </div>
       </div>
   </div>
-
+  <script type="text/javascript">
+    $(function() {
+      $('.post-form').each(function() {
+        $(this).froalaEditor()
+      });
+    });
+  </script>
   <!-- inc footer -->
   <?php include 'views/inc/footer.php' ?>
   <!-- inc footer -->

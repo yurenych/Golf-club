@@ -13,7 +13,7 @@
   <script type="text/javascript" src="/public/src/js/main.js"></script>
 
   <link rel="stylesheet" href="/public/src/css/styles.css"/>
-  <link rel="stylesheet" href="/public/src/css/aktualnosci.css"/>
+  <link rel="stylesheet" href="/public/src/css/post.css"/>
 </head>
 
 <body>
@@ -27,11 +27,11 @@
   <?php include 'views/inc/navigation.php' ?>
   <!-- end inc navigation menu -->
 <div class="container-fluid">
-  <div class="row mainContainer">
-    <div class="wrapper col-md-8">
-      <img src="/public/src/img/aktualnosci/post/<?= $data['obraz'] ?>">
+  <div class="mainContainer">
+    <div class="wrapper">
       <div class="headline"><?= $data['temat'] ?></div>
-      <p><?= $data['opis'] ?></p>
+      <p class="postActicle"><?= $data['opis'] ?></p>
+      <img class="postImg" src="/public/src/img/aktualnosci/post/<?= $data['obraz'] ?>">
     </div>
   </div>
 </div>
