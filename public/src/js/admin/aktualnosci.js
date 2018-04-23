@@ -1,7 +1,6 @@
 // Add row at the post.
-$('#addRow').on('click', function addRow() {
+$('#addRow').on('click', function () {
     var _token = $('input[name="_token"]').val(); // Declare csrf-token for validation.
-
     // Send Ajax to create/remove rows in table.
     $.ajax({
         url: '/admin/aktualnosci/actions',
@@ -11,27 +10,34 @@ $('#addRow').on('click', function addRow() {
             action: 'add_row'
         },
         success: function (id) {
-            console.log(id);
             if(id) {
-                var old_id = $('form > div:first').data('id'); // Declare id for replace.
+                var $firstDIV = $('#posts-form > div:eq(0)')
+                var old_id = $firstDIV.data('id'); // Declare id for replace.
 
                 // Clone and clear new row.
-                $('form > div:eq(0)')
+                $firstDIV
                     .clone()
-                    .insertBefore('form > div:first')
+                    .insertBefore('#posts-form > div:first')
                     .find('img')
                     .attr('src', '')
                     .parent()
                     .parent()
                     .attr('data-id', id)
-                    .find('input, textarea').each(function () {
+                    .find('.input-to-clone').each(function () {
                         // Replace attr name and clear values.
+                        if($(this).hasClass('richText-initial')) $(this).parent().find('.richText-editor').html('')
                         $(this).val('').attr('name', $(this).attr('name').replace(old_id, id));
                     });
             }
         }
     });
 });
+
+$('#posts-form').submit(function(e) {
+    $('#posts-form .richText-initial').each(function(){
+        $(this).val($(this).parent().find('.richText-editor').html())
+    })
+})
 
 // Remove row at the post.
 $('form').on('click', '#removeRow',function removeRow() {

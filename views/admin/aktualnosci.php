@@ -59,30 +59,29 @@
           <div class="wrapper col-md-8">
               <div class="headline"><?= $trans['NEWS'] ?></div>
               <div class="news-container">
-                  <form action="/admin/aktualnosci/save" method="POST" enctype="multipart/form-data">
+                  <form id='posts-form' action="/admin/aktualnosci/save" method="POST" enctype="multipart/form-data">
                       <input type="hidden" name="_token" value="<?= CSRF_TOKEN ?: '' ?>">
+                      <button type='button' id="addRow">+</button>
+                      <input type="submit" value="Save">
                       <?php $i = 0; ?>
                       <?php foreach ($data['aktualnosci_post'] as $aktualnosci_post) { ?>
-
                           <div class="news-photo-container row" data-id="<?= $aktualnosci_post['id'] ?>">
                               <a id="removeRow">x</a>
                               <h3 class="newsTitle">
-                                  <input type="text" name="aktualnosci[<?= $aktualnosci_post['id'] ?>][temat]" value="<?= $aktualnosci_post['temat'] ?>">
+                                  <input class='input-to-clone' type="text" name="aktualnosci[<?= $aktualnosci_post['id'] ?>][temat]" value="<?= $aktualnosci_post['temat'] ?>">
                               </h3>
                               <div class="photo-news col-md-3 col-md-offset-1">
                                   <img src="/public/src/img/aktualnosci/post/<?= $aktualnosci_post['obraz'] ?>">
-                                  <input type="file" name="aktualnosci[<?= $aktualnosci_post['id'] ?>][obraz]" accept="image/*">
+                                  <input class='input-to-clone' type="file" name="aktualnosci[<?= $aktualnosci_post['id'] ?>][obraz]" accept="image/*">
                               </div>
                               <div class="news-text col-md-8">
                                   <div>
-                                      <textarea class='post-textarea' id="post-textarea-<?= $aktualnosci_post['id']?>" hidden name="aktualnosci[<?= $aktualnosci_post['id'] ?>][opis]"><?= $aktualnosci_post['opis'] ?></textarea>
+                                      <textarea class='post-textarea input-to-clone' id="post-textarea-<?= $aktualnosci_post['id']?>" name="aktualnosci[<?= $aktualnosci_post['id'] ?>][opis]"><?= $aktualnosci_post['opis'] ?></textarea>
                                   </div>
                               </div>
                           </div>
                       <?php } ?>
 
-                      <p id="addRow">+</p>
-                      <input type="submit" value="Save">
                   </form>
               </div>
           </div>
