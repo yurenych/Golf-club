@@ -50,7 +50,7 @@
                       <img src="/public/src/img/aktualnosci/post/<?= $aktualnosci_post['obraz'] ?>">
                   </div>
                   <div class="news-text col-md-8">
-                      <div>
+                      <div class='news-text-container'>
                           <?= $aktualnosci_post['opis'] ?>
                       </div>
                       <a href="/post?id=<?= $aktualnosci_post['id'] ?>"><button><?= $trans['more'] ?></button></a>

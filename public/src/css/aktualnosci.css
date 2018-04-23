@@ -141,7 +141,7 @@
 	width:100%;
 }
 
-.news-text div{
+.news-text .news-text-container {
 	line-height: 1.5em;
 	overflow: hidden;
 }
@@ -151,7 +151,7 @@
 	.photo-news{
 		padding: 0 15px 0 0;
 	}
-	.news-text div {
+	.news-text .news-text-container {
 		max-height: 9em;
 	}
 }

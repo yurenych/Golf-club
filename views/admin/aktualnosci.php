@@ -13,13 +13,12 @@
   <script type="text/javascript" src="/public/src/js/main.js"></script>
 
   <script type="text/javascript" src="/public/src/js/admin/aktualnosci.js" defer></script>
-  <script type="text/javascript" src="/public/src/js/vendor/froala_editor.js" defer></script>
+  <script type="text/javascript" src="/public/src/js/editor.js"></script>
 
+  <link rel="stylesheet" href="/public/src/css/editor.css"/>
   <link rel="stylesheet" href="/public/src/css/styles.css"/>
   <link rel="stylesheet" href="/public/src/css/aktualnosci.css"/>
   <link rel="stylesheet" href="/public/src/css/font-awesome.min.css"/>
-  <link rel="stylesheet" href="/public/src/css/froala_editor.min.css"/>
-  <link rel="stylesheet" href="/public/src/css/froala_style.min.css"/>
 </head>
 
 <body>
@@ -70,13 +69,13 @@
                               <h3 class="newsTitle">
                                   <input type="text" name="aktualnosci[<?= $aktualnosci_post['id'] ?>][temat]" value="<?= $aktualnosci_post['temat'] ?>">
                               </h3>
-                              <div class="photo-news col-md-3 col-md-offset-2">
+                              <div class="photo-news col-md-3 col-md-offset-1">
                                   <img src="/public/src/img/aktualnosci/post/<?= $aktualnosci_post['obraz'] ?>">
                                   <input type="file" name="aktualnosci[<?= $aktualnosci_post['id'] ?>][obraz]" accept="image/*">
                               </div>
-                              <div class="news-text col-md-5">
+                              <div class="news-text col-md-8">
                                   <div>
-                                      <textarea class='post-form' rows="13" name="aktualnosci[<?= $aktualnosci_post['id'] ?>][opis]"><?= $aktualnosci_post['opis'] ?></textarea>
+                                      <textarea class='post-textarea' id="post-textarea-<?= $aktualnosci_post['id']?>" hidden name="aktualnosci[<?= $aktualnosci_post['id'] ?>][opis]"><?= $aktualnosci_post['opis'] ?></textarea>
                                   </div>
                               </div>
                           </div>
@@ -115,9 +114,55 @@
       </div>
   </div>
   <script type="text/javascript">
-    $(function() {
-      $('.post-form').each(function() {
-        $(this).froalaEditor({
+    console.log($.richText)
+    $(document).ready(function() {
+      $('.post-textarea').each(function() {
+        $(this).richText({
+
+          // text formatting
+          bold: true,
+          italic: true,
+          underline: true,
+
+          // text alignment
+          leftAlign: true,
+          centerAlign: true,
+          rightAlign: true,
+
+          // lists
+          ol: true,
+          ul: true,
+
+          // title
+          heading: true,
+
+          // fonts
+          fonts: true,
+          fontList: [ "Arial",
+                      "Arial Black",
+                      "Comic Sans MS",
+                      "Courier New",
+                      "Geneva",
+                      "Georgia",
+                      "Helvetica",
+                      "Impact",
+                      "Lucida Console",
+                      "Tahoma",
+                      "Times New Roman",
+                      "Verdana"
+                      ],
+          fontColor: true,
+          fontSize: true,
+
+          // link
+          urls: true,
+
+          // tables
+          table: true,
+
+          // code
+          removeStyles: true,
+          code: true,
         })
       });
     });
