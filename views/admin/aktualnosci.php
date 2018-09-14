@@ -171,15 +171,18 @@
             "</form>",
         });
       });
+      var currentSessionFiles = [];
       $('.file-input').each(function() {
         var $addFileBtn = $(this).parent().parent().find('.btn')
         $addFileBtn.hide();
+        $addFileBtn.click(function(){$(this).hide();});
 
         $(this).on('change', function() {
           var $fileOutput = $(this).prev()
           var fileData = $(this).prop('files')[0];
           var formData = new FormData();
           formData.append('file', fileData);
+          formData.append('currentSessionFiles', currentSessionFiles);
 
           jQuery.ajax({
             type: 'POST',
@@ -191,6 +194,7 @@
               var res = JSON.parse(res);
               if(res.error) throw res.error;
               $fileOutput.val(res.permalink);
+              currentSessionFiles.push(res.permalink.split('/').pop());
               $addFileBtn.show();
             },
           });

@@ -301,6 +301,8 @@ class AdminController extends Route
       $targetFolder = UPLOAD_FILES . 'docs/';
       $existing_files = scandir($targetFolder);
 
+      $current_session_files = $post['currentSessionFiles'];
+
       foreach($existing_files as $file) {
         if($file == '.' || $file == '..') continue;
 
@@ -310,8 +312,8 @@ class AdminController extends Route
         ->where("opis LIKE '%$file%'")
         ->first();
 
-        //File isn't used in post, thus needs to be deleted
-        if($res == NULL) unlink($targetFolder.$file);
+        //File isn't used in any post, thus needs to be deleted
+        if($res == NULL && strpos($current_session_files, $file) === false) unlink($targetFolder.$file);
       }
 
 
