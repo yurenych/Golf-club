@@ -113,9 +113,8 @@
       </div>
   </div>
   <script type="text/javascript">
-    console.log($.richText)
     $(document).ready(function() {
-      $('.post-textarea').each(function() {
+      $('.post-textarea').each(function(i) {
         $(this).richText({
 
           // text formatting
@@ -162,7 +161,40 @@
           // code
           removeStyles: true,
           code: true,
-        })
+
+          fileText: "",
+          fileHTML:
+            "<form>"+
+              "<input type='text' id='fileText' placeholder='Link text'/>"+
+              "<input type='hidden' id='fileURL' class='file-output'/>"+
+              "<input type='file' class='file-input' id='file-input-"+i+"'/>"+
+            "</form>",
+        });
+      });
+      $('.file-input').each(function() {
+        var $addFileBtn = $(this).parent().parent().find('.btn')
+        $addFileBtn.hide();
+
+        $(this).on('change', function() {
+          var $fileOutput = $(this).prev()
+          var fileData = $(this).prop('files')[0];
+          var formData = new FormData();
+          formData.append('file', fileData);
+
+          jQuery.ajax({
+            type: 'POST',
+            url:"/admin/aktualnosci/upload_file",
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function(res) {
+              var res = JSON.parse(res);
+              if(res.error) throw res.error;
+              $fileOutput.val(res.permalink);
+              $addFileBtn.show();
+            },
+          });
+        });
       });
     });
   </script>

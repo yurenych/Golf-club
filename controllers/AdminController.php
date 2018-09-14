@@ -294,6 +294,36 @@ class AdminController extends Route
         return $this->redirect('/admin/aktualnosci');
     }
 
+    public function aktualnosciUploadFile($post, $files) {
+      if( 0 < $_FILES['file']['error'] )
+        return array('error' => $_FILES['file']['error']);
+
+      $targetFolder = UPLOAD_FILES . 'docs/';
+      $existing_files = scandir($targetFolder);
+
+      foreach($existing_files as $file) {
+        if($file == '.' || $file == '..') continue;
+
+        $res = parent::models('DB')
+        ->table('aktualnosci_post')
+        ->select('opis')
+        ->where("opis LIKE '%$file%'")
+        ->first();
+
+        //File isn't used in post, thus needs to be deleted
+        if($res == NULL) unlink($targetFolder.$file);
+      }
+
+
+      $tmp_name = $_FILES['file']['tmp_name'];
+      $file_name = base_convert(uniqid(), 16, 36) . '.' . pathinfo($files['file']['name'], PATHINFO_EXTENSION);
+      $target = $targetFolder . $file_name;
+
+      // Uploaded images.
+      move_uploaded_file($tmp_name, $target);
+      return array('error' => '', 'permalink' => $target);
+    }
+
     // Action photo form from aktualnosci.
     public function aktualnosciSavePhoto($post, $files)
     {
@@ -347,7 +377,6 @@ class AdminController extends Route
 
                                 $tmp_url = $files['aktualnosci']['tmp_name'][$id]['obraz'];
                                 compress_image($tmp_url, $tmp_url);
-
                                 // Uploaded images.
                                 move_uploaded_file($files['aktualnosci']['tmp_name'][$id]['obraz'], $target);
                             } else {

@@ -141,7 +141,9 @@ Class Route
                             case ['POST', 'save_wideo']:
                                 $to_view = self::controllers('AdminController')->aktualnosciSaveWideo($_POST);
                                 return self::views(key($to_view), array_shift($to_view));
-
+                            case ['POST', 'upload_file']:
+                              echo json_encode(self::controllers('AdminController')->aktualnosciUploadFile($_POST, $_FILES));
+                              break;
                             default:
                                 $to_view = self::controllers('AdminController')->middleWare()->aktualnosci();
                                 return self::views(key($to_view), array_shift($to_view));

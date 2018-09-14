@@ -15,7 +15,7 @@
             <div><a target="_blank" href="https://www.facebook.com/Ground-Golf-Klub-2106618282906231/">Facebook</a></div>
         </div>
         <div class="contactus">
-            <img class='mailLogo' src="/public/src/img/mail-icon.png">
+            <img class='mailLogo' src="/public/src/img/email-icon.png">
             <div><p><a target="_blank" href="mailto:info@groundgolf.pl"><?= $trans['write-to-us'] ?></a></div>
         </div>
     </div>

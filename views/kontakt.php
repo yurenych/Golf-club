@@ -44,7 +44,7 @@
           <img class='poczta' src="/public/src/img/mail-icon.png">
         </div>
         <div class="kontaktText">
-          <b>info@groundgolf.pl
+          <a target="_blank" href="mailto:info@groundgolf.pl"><b>info@groundgolf.pl</a>
           </b>
         </div>
       </div>

@@ -8,6 +8,7 @@ define('DS', DIRECTORY_SEPARATOR);
 
 // Where upload images.
 define('UPLOAD_IMAGES', 'public/src/img/');
+define('UPLOAD_FILES', 'public/src/uploads/');
 define('IMAGES_GALERIA', UPLOAD_IMAGES . 'galeria/');
 
 // Set anti csrf-attack.

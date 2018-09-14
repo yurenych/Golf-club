@@ -63,7 +63,8 @@
             </div>
           </div> 
           <div class="col-md-12 histotyTitle">
-            <br><?= $trans['club-text-4'] ?>
+            <br><?= $trans['club-text-4.1'] ?>
+            <br><br><?= $trans['club-text-4.2'] ?>
           </div>
           <div class="col-md-12 history-photo-block">
             <div class="slider">
@@ -113,7 +114,11 @@
       <li class="club-info-cele">
         <div class="cele">
           <h2 class="headline"><?= $trans['club-title-2'] ?></h2>
-          <?= $trans['club-text-8'] ?>
+          <?= $trans['club-text-8.1'] ?>
+          <br><br><?= $trans['club-text-8.2'] ?>
+          <br><br><?= $trans['club-text-8.3'] ?>
+          <br><br><?= $trans['club-text-8.4'] ?>
+          <br><br><?= $trans['club-text-8.5'] ?>
           <div class="KlubPhoto">
             <img class="naszKlubPhoto" src="/public/src/img/club/klub1.jpg">
           </div>
@@ -138,6 +143,10 @@
             <br>14. <?= $trans['club-goals-14']?>
             <br>15. <?= $trans['club-goals-15']?>
             <br>16. <?= $trans['club-goals-16']?>
+        </div>
+        <div class="jak-dolaczyc">
+          <h2 class="headline"><?= $trans['club-title-6'] ?></h2>
+          <br><?= $trans['club-text-9'] ?>
         </div>
         <h1><?= $trans['status-bodies']?></h1>
       </li>
