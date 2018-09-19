@@ -16,18 +16,25 @@ $('#addRow').on('click', function () {
 
                 // Clone and clear new row.
                 $firstDIV
-                    .clone()
-                    .insertBefore('#posts-form > div:first')
-                    .find('img')
-                    .attr('src', '')
-                    .parent()
-                    .parent()
-                    .attr('data-id', id)
-                    .find('.input-to-clone').each(function () {
-                        // Replace attr name and clear values.
-                        if($(this).hasClass('richText-initial')) $(this).parent().find('.richText-editor').html('')
-                        $(this).val('').attr('name', $(this).attr('name').replace(old_id, id));
-                    });
+                  .clone()
+                  .insertBefore('#posts-form > div:first')
+                  .find('img')
+                  .attr('src', '')
+                  .parent()
+                  .parent()
+                  .attr('data-id', id)
+                  .find('.input-to-clone')
+                  .each(function() {
+                    $(this).val('').attr('name', $(this).attr('name').replace(old_id, id));
+                    if($(this).hasClass('richText-initial')) {
+                      $(this).attr('id', $(this).attr('id').replace(old_id, id));
+                      $parent = $(this).parent();
+                      var $newTextarea = $(this).insertBefore($parent);
+                      $parent.remove();
+                      $newTextarea.empty();
+                      initRichText($newTextarea, id);
+                    }
+                  });
             }
         }
     });
@@ -68,4 +75,102 @@ $('form').on('click', '#removeRow',function removeRow() {
             }
         }
     });
+});
+
+
+
+var currentSessionFiles = [];
+
+function setHandler(el) {
+  var $addFileBtn = $(el).parent().parent().find('.btn')
+  $addFileBtn.hide();
+  $addFileBtn.click(function(){$(el).hide();});
+
+  $(el).on('change', function() {
+    var $fileOutput = $(el).prev()
+    var fileData = $(el).prop('files')[0];
+    var formData = new FormData();
+    formData.append('file', fileData);
+    formData.append('currentSessionFiles', currentSessionFiles);
+
+    jQuery.ajax({
+      type: 'POST',
+      url:"/admin/aktualnosci/upload_file",
+      data: formData,
+      processData: false,
+      contentType: false,
+      success: function(res) {
+        var res = JSON.parse(res);
+        if(res.error) throw res.error;
+        $fileOutput.val(res.permalink);
+        currentSessionFiles.push(res.permalink.split('/').pop());
+        $addFileBtn.show();
+      },
+    });
+  });
+}
+
+function initRichText(el, id) {
+  $(el).richText({
+    // text formatting
+    bold: true,
+    italic: true,
+    underline: true,
+
+    // text alignment
+    leftAlign: true,
+    centerAlign: true,
+    rightAlign: true,
+
+    // lists
+    ol: true,
+    ul: true,
+
+    // title
+    heading: true,
+
+    // fonts
+    fonts: true,
+    fontList: [ "Arial",
+                "Arial Black",
+                "Comic Sans MS",
+                "Courier New",
+                "Geneva",
+                "Georgia",
+                "Helvetica",
+                "Impact",
+                "Lucida Console",
+                "Tahoma",
+                "Times New Roman",
+                "Verdana"
+                ],
+    fontColor: true,
+    fontSize: true,
+
+    // link
+    urls: true,
+
+    // tables
+    table: true,
+
+    // code
+    removeStyles: true,
+    code: true,
+
+    fileText: "",
+    fileHTML:
+      "<form>"+
+        "<input type='text' id='fileText' placeholder='Link text'/>"+
+        "<input type='hidden' id='fileURL' class='file-output'/>"+
+        "<input type='file' class='file-input' id='file-input-"+id+"'/>"+
+      "</form>",
+  });
+  setHandler($('#file-input-'+id));
+}
+
+$(document).ready(function() {
+  $('.post-textarea').each(function() {
+    var currId = $(this).attr('id').split('-').pop()
+    initRichText(this, currId);
+  });
 });

@@ -51,7 +51,6 @@
 
                       <input type="submit" name="remove[<?= $aktualnosci_photo['id'] ?>]" value="x">
                   <?php } ?>
-
                   <input type="submit" name="add" value="+">
                   <input type="submit" name="save" value="Save">
               </form>
@@ -113,94 +112,6 @@
       </div>
   </div>
   <script type="text/javascript">
-    $(document).ready(function() {
-      $('.post-textarea').each(function(i) {
-        $(this).richText({
-
-          // text formatting
-          bold: true,
-          italic: true,
-          underline: true,
-
-          // text alignment
-          leftAlign: true,
-          centerAlign: true,
-          rightAlign: true,
-
-          // lists
-          ol: true,
-          ul: true,
-
-          // title
-          heading: true,
-
-          // fonts
-          fonts: true,
-          fontList: [ "Arial",
-                      "Arial Black",
-                      "Comic Sans MS",
-                      "Courier New",
-                      "Geneva",
-                      "Georgia",
-                      "Helvetica",
-                      "Impact",
-                      "Lucida Console",
-                      "Tahoma",
-                      "Times New Roman",
-                      "Verdana"
-                      ],
-          fontColor: true,
-          fontSize: true,
-
-          // link
-          urls: true,
-
-          // tables
-          table: true,
-
-          // code
-          removeStyles: true,
-          code: true,
-
-          fileText: "",
-          fileHTML:
-            "<form>"+
-              "<input type='text' id='fileText' placeholder='Link text'/>"+
-              "<input type='hidden' id='fileURL' class='file-output'/>"+
-              "<input type='file' class='file-input' id='file-input-"+i+"'/>"+
-            "</form>",
-        });
-      });
-      var currentSessionFiles = [];
-      $('.file-input').each(function() {
-        var $addFileBtn = $(this).parent().parent().find('.btn')
-        $addFileBtn.hide();
-        $addFileBtn.click(function(){$(this).hide();});
-
-        $(this).on('change', function() {
-          var $fileOutput = $(this).prev()
-          var fileData = $(this).prop('files')[0];
-          var formData = new FormData();
-          formData.append('file', fileData);
-          formData.append('currentSessionFiles', currentSessionFiles);
-
-          jQuery.ajax({
-            type: 'POST',
-            url:"/admin/aktualnosci/upload_file",
-            data: formData,
-            processData: false,
-            contentType: false,
-            success: function(res) {
-              var res = JSON.parse(res);
-              if(res.error) throw res.error;
-              $fileOutput.val(res.permalink);
-              currentSessionFiles.push(res.permalink.split('/').pop());
-              $addFileBtn.show();
-            },
-          });
-        });
-      });
-    });
   </script>
   <!-- inc footer -->
   <?php include 'views/inc/footer.php' ?>
